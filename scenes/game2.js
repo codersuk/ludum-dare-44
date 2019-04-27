@@ -45,7 +45,7 @@ Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
 
     var scene1BG = Crafty.e('Scene1BG')
-    var platform = Crafty.e('Platform')
+    var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
     var GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
     var bountyhunter = Crafty.e('BountyHunter')
