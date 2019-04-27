@@ -12,7 +12,7 @@ Crafty.defineScene("Loading", function() {
 
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
-         Crafty.scene('Game');
+         Crafty.scene('Game2');
        }, 1000);
     },  function () {
       console.log("Crafty Load Issue");
