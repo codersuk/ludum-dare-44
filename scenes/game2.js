@@ -41,11 +41,14 @@ function generateObjects(userlevel) {
 }
 
 var audioPlaying = [];
+var shouldPlayAudio = false;
 var player;
 Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
     audioPlaying.push("ambient-background-fastest")
-    Crafty.audio.play("ambient-background-fastest", -1, 0.2);
+    if( shouldPlayAudio ) {
+        Crafty.audio.play("ambient-background-fastest", -1, 0.2);
+    }
     var scene1BG = Crafty.e('Scene1BG')
     var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
