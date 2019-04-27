@@ -1,15 +1,4 @@
 
-
-var PLAYER_HIT_POWER_EVENT = "PLAYER_HIT_POWER_EVENT";
-var PLAYER_HIT_OBSTACLE_EVENT = "PLAYER_HIT_OBSTACLE_EVENT";
-var BOUNTY_HUNTER_HIT_OBSTACLE_EVENT = "BOUNTY_HUNTER_HIT_OBSTACLE_EVENT";
-
-var objects = [
-	 WOODENLOG, STONE, PUDDLE,
-	 FIRE, SMOKE, ANGRYBIRD
-];
-
-
 function makeCameraTrackEntity(entity, yoffset) {
     // Sets up the Camera Tracking to the player entity
     Crafty.viewport.clampToEntities = false;
@@ -21,23 +10,10 @@ function makeCameraTrackEntity(entity, yoffset) {
 }
 
 function sceneCountdown() {
-    var totalSeconds = 2 * 60;
-    var time = Crafty.e('2D, DOM, Text')
-        .attr({w: 50, h: 100, x: 700, y: 20})
-        .text("02:00")
-        .bind("UpdateTime", function () {
-            //calculate time
-            totalSeconds -= 1;
-            var minutes = parseInt(totalSeconds / 60);
-            var seconds = totalSeconds % 60;
-            if (totalSeconds <= 0) {
-                clearInterval(gameInterval);
-            }
-
-            //update time text
-            this.text(("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2));
-
-        });
+    var time = Crafty.e('Countdown')
+        .setCountdownOverAction(function () {
+            clearInterval(gameInterval);
+        })
 
     var gameInterval = setInterval(function () {
         Crafty.trigger("UpdateTime");
