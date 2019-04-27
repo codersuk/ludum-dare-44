@@ -1,4 +1,5 @@
 Crafty.c("Obstacle", {
+    //Parent component of obstacles
     init: function () {
         this.requires('Collision')
         this.onHit("Player", function (hitData) {

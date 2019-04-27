@@ -25,26 +25,26 @@ var gameAssets = {
             "tileh": 64,
             "map": {"grass": [0, 0]}
         },
-        "images/sprites/obstacle1.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"obstacle1": [0, 0]}
+        "images/sprites/puddle.png": {
+            "tile": 85,
+            "tileh": 10,
+            "map": {"puddle": [0, 0]}
         },
-        "images/sprites/obstacle2.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"obstacle2": [0, 0]}
+        "images/sprites/stone.png": {
+            "tile": 64,
+            "tileh": 64,
+            "map": {"stone": [0, 0]}
         },
-        "images/sprites/obstacle3.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"obstacle3": [0, 0]}
+        "images/sprites/woodenlog.png": {
+            "tile": 100,
+            "tileh": 32,
+            "map": {"woodenlog": [0, 0]}
         },
 
-        "images/sprites/powerUp1.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"powerUp1": [0, 0]}
+        "images/sprites/angrybird.png": {
+            "tile": 32,
+            "tileh": 32,
+            "map": {"angrybird": [0, 0]}
         },
         "images/sprites/powerUp2.png": {
             "tile": 48,
