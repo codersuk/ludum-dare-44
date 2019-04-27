@@ -8,6 +8,7 @@ Crafty.c("Player", {
   		this.gravity("Platform");
 		this.vx += MOVE_RIGHT_RATE_PLAYER;
 		this.onHit("BountyHunter", function (hitData) {
+
 			Crafty.trigger(PLAYER_HIT_BOUNTY_HUNTER_EVENT)
 		});
 		this.hasDoubleJumpPowerUp = true;
@@ -24,5 +25,6 @@ Crafty.c("Player", {
 			this.jumpSpeed(300);
 			this.hasDoubleJumpPowerUp = true; // give this new double jump powerup upon landing
 		});
+
 	},
 });
