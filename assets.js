@@ -1,4 +1,3 @@
-
 /*
 this is our game assets object.
  */
@@ -7,57 +6,55 @@ this is our game assets object.
 // User lower case for component name
 // 
 var gameAssets = {
-    "audio": {
-
-    },
+    "audio": {},
     "images": [],
     "sprites": {
         "images/sprites/player.png": {
             "tile": 128,
             "tileh": 64,
-            "map": { "player": [0,0] }
+            "map": {"player": [0, 0]}
         },
 
         "images/sprites/bountyHunter.png": {
             "tile": 64,
             "tileh": 128,
-            "map": { "bountyHunter": [0,0] }
+            "map": {"bountyHunter": [0, 0]}
         },
         "images/sprites/grass.png": {
             "tile": 64,
             "tileh": 64,
-            "map": { "grass": [0,0] }
+            "map": {"grass": [0, 0]}
         },
         "images/sprites/obstacle1.png": {
             "tile": 48,
             "tileh": 48,
-            "map": { "obstacle1": [0,0] }
+            "map": {"obstacle1": [0, 0]}
         },
         "images/sprites/obstacle2.png": {
             "tile": 48,
             "tileh": 48,
-            "map": { "obstacle2": [0,0] }
+            "map": {"obstacle2": [0, 0]}
         },
         "images/sprites/obstacle3.png": {
             "tile": 48,
             "tileh": 48,
-            "map": { "obstacle3": [0,0] }
+            "map": {"obstacle3": [0, 0]}
         },
 
         "images/sprites/powerUp1.png": {
             "tile": 48,
             "tileh": 48,
-            "map": { "powerUp1": [0,0] }
+            "map": {"powerUp1": [0, 0]}
         },
         "images/sprites/powerUp2.png": {
             "tile": 48,
             "tileh": 48,
-            "map": { "powerUp2": [0,0] }
+            "map": {"powerUp2": [0, 0]}
         },
         "images/sprites/powerUp3.png": {
             "tile": 48,
             "tileh": 48,
-            "map": { "powerUp3": [0,0] }
+            "map": {"powerUp3": [0, 0]}
         },
 
     },
