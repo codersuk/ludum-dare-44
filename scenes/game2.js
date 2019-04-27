@@ -1,7 +1,5 @@
 
 
-var PLAYER_HIT_BOUNTY_HUNTER_EVENT = "PLAYER_HIT_BOUNTY_HUNTER_EVENT";
-
 function makeCameraTrackEntity(entity, yoffset) {
     Crafty.viewport.clampToEntities = false;
     Crafty.viewport.scale(1);
@@ -49,6 +47,6 @@ Crafty.defineScene("Game2", function () {
     makeCameraTrackEntity(player, DOUBLE_UNIT + SINGLE_UNIT)
 });
 
-Crafty.bind(PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
+Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
     Crafty.scene("Game2")
 })
