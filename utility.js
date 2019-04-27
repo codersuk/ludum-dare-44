@@ -4,6 +4,11 @@ This is a utility page to update and bank the score.
 
 var start, end;
 
+function setTimeout(func, time, callOff) {
+	console.log("setTimeout called.")
+	Crafty.e("Delay").delay(func, time, 0, callOff);
+}
+
 function startTimer(){
 
 //    Start timer

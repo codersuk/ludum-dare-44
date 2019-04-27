@@ -21,6 +21,7 @@ function sceneCountdown() {
 }
 
 var objIndex = 0;
+
 function generateObjects(userlevel) {
 	setTimeout(function() {
 		console.log("Generating obj");
@@ -62,6 +63,8 @@ Crafty.defineScene("Game2", function (userlevel) {
 
     // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT + SINGLE_UNIT)
+}, function () {
+    
 });
 
 Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
