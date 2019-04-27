@@ -1,7 +1,7 @@
 Crafty.c("Countdown", {
     init : function () {
         this.requires('2D, DOM, Text')
-        this.totalSeconds = 2 * 6;
+        this.totalSeconds = 2 * 60;
         this.attr({w: 50, h: 100, x: 700, y: 20})
         this.text("02:00")
         this.bind("UpdateTime", function () {
