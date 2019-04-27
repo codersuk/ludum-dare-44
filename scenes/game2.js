@@ -13,21 +13,9 @@ function makeCameraTrackEntity(entity, yoffset) {
 }
 
 Crafty.defineScene("Game2", function() {
-	var platform = Crafty.e('2D, DOM, Color')
-		.attr({x: 0, y: GAME_SCREEN_HEIGHT - SINGLE_UNIT, w: 3000, h: SINGLE_UNIT})
-		.color('#040');
-
-	var player = Crafty.e('2D, DOM, Color, Twoway, Player, Collision')
-		.attr({x: GAME_SCREEN_WIDTH / 2, y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - SINGLE_UNIT, w: DOUBLE_UNIT, h: SINGLE_UNIT})
-		.twoway(200)
-		.color('#171')
-		.onHit("BountyHunter", function (hitData) {
-			Crafty.trigger(PLAYER_HIT_BOUNTY_HUNTER_EVENT)
-		})
-
-	var bountyhunter = Crafty.e('BountyHunter, 2D, DOM, Color, Collision')
-		.attr({x: GAME_SCREEN_WIDTH / 25, y: GAME_SCREEN_HEIGHT - DOUBLE_UNIT - SINGLE_UNIT, w: SINGLE_UNIT, h: DOUBLE_UNIT})
-		.color('#111');
+	var platform = Crafty.e('Platform')
+	var player = Crafty.e('Player')
+	var bountyhunter = Crafty.e('BountyHunter')
 
 	// TODO Offset calculation isn't right, close enough for now.
 	makeCameraTrackEntity(player, DOUBLE_UNIT  + SINGLE_UNIT)
