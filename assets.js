@@ -11,7 +11,7 @@ var gameAssets = {
         "ambient-background-normal" : ["audio/ambient-woods-normal.wav"],
         "ambient-background-fast" : ["audio/ambient-woods-fast.wav"],
         "ambient-background-faster" : ["audio/ambient-woods-300.mp3"], 
-        "ambient-background-fastest" : ["audio/ambient-woods-800.mp3"], 
+        "ambient-background-fastest" : ["audio/ambient-woods-400.mp3"], 
         "dragon-fire" : ["audio/dragon-fire.mp3"], 
     },
     "images": [],

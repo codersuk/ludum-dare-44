@@ -40,9 +40,11 @@ function generateObjects(userlevel) {
 	}, getRandomInteger(3,7) * 1000);
 }
 
+var audioPlaying = [];
 var player;
 Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
+    audioPlaying.push("ambient-background-fastest")
     Crafty.audio.play("ambient-background-fastest", -1, 0.2);
     var scene1BG = Crafty.e('Scene1BG')
     var platform = Crafty.e('GroundPlatform')
@@ -62,6 +64,10 @@ Crafty.defineScene("Game2", function (userlevel) {
 
     // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT + SINGLE_UNIT)
+}, function () {
+    for (var i = audioPlaying.length - 1; i >= 0; i--) {
+        Crafty.audio.stop(audioPlaying[i]);
+    }
 });
 
 Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
