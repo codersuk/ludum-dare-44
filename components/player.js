@@ -8,7 +8,8 @@ Crafty.c("Player", {
   		this.gravity("Platform");
 		this.vx += MOVE_RIGHT_RATE_PLAYER;
 		this.onHit("BountyHunter", function (hitData) {
-			Crafty.trigger(PLAYER_HIT_BOUNTY_HUNTER_EVENT)
+
+			Crafty.trigger(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT)
 		});
 		this.hasDoubleJumpPowerUp = true;
 		//double jump check
@@ -47,6 +48,8 @@ Crafty.c("Player", {
 				}.bind(tempItem),700)
 			}
 			// console.log(this.x);
+
+
 		})
 	},
 });
