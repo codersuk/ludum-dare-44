@@ -39,7 +39,16 @@ function sceneCountdown() {
 Crafty.defineScene("Game2", function () {
     var platform = Crafty.e('Platform')
     var player = Crafty.e('Player')
-    var bountyhunter = Crafty.e('BountyHunter')
+	var bountyhunter = Crafty.e('BountyHunter')
+
+
+	var obstacle_woodenlog = Crafty.e('WoodenLog')
+	var obstacle_stone = Crafty.e('Stone')
+	var obstacle_puddle = Crafty.e('Puddle')
+
+	var power_fire = Crafty.e('Fire')
+	var power_smoke = Crafty.e('Smoke')
+	var power_angrybird = Crafty.e('AngryBird')
     //TODO: load the course environment here
 
 
