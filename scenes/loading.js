@@ -1,3 +1,4 @@
+//Loading the Game
 Crafty.defineScene("Loading", function() {
     Crafty.background("#AAA");
     Crafty.e("2D, DOM, Text")
@@ -12,7 +13,10 @@ Crafty.defineScene("Loading", function() {
 
   	Crafty.load(gameAssets, function(){
        setTimeout(function () {
-         Crafty.scene('Game2');
+
+         //  Load the first scene here
+         Crafty.scene('Start');
+
        }, 1000);
     },  function () {
       console.log("Crafty Load Issue");
