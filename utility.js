@@ -25,3 +25,7 @@ function stopTimer(){
 function getRandomInteger(min, max) {
 	return Math.floor(Math.random() * max) + min;
 }
+
+function isObjectNotNull(object) {
+	return typeof object !== 'undefined';
+}
