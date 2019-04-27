@@ -3,6 +3,7 @@
 var PLAYER_HIT_BOUNTY_HUNTER_EVENT = "PLAYER_HIT_BOUNTY_HUNTER_EVENT";
 
 function makeCameraTrackEntity(entity, yoffset) {
+    // Sets up the Camera Tracking to the player entity
     Crafty.viewport.clampToEntities = false;
     Crafty.viewport.scale(1);
     Crafty.one("CameraAnimationDone", function () {
@@ -42,6 +43,7 @@ Crafty.defineScene("Game2", function () {
     var scene1BG = Crafty.e('Scene1BG')
     var platform = Crafty.e('Platform')
     var player = Crafty.e('Player')
+    var GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
     var bountyhunter = Crafty.e('BountyHunter')
 
     //TODO: load the course environment here
@@ -51,7 +53,7 @@ Crafty.defineScene("Game2", function () {
     sceneCountdown();
 
     // TODO: Offset calculation isn't right, close enough for now.
-    makeCameraTrackEntity(player, DOUBLE_UNIT + SINGLE_UNIT)
+    makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT + SINGLE_UNIT)
 });
 
 Crafty.bind(PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
