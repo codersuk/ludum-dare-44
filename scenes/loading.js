@@ -7,17 +7,17 @@ Crafty.defineScene("Loading", function() {
           .textFont({ size: '20px', weight: 'bold' })
           .textAlign("center")
           .textColor("#111");
- 	
+
     // Game Assets would be a list of images, but this tutorial doesn't use them.
-    var gameAssets = {};
+    // var gameAssets = {}; // defined already in assets.js
 
   	Crafty.load(gameAssets, function(){
-       setTimeout(function () {
 
+        console.log(gameAssets);
          //  Load the first scene here
          Crafty.scene('Start');
 
-       }, 1000);
+
     },  function () {
       console.log("Crafty Load Issue");
     },  function (e) {
