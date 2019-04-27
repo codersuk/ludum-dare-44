@@ -41,7 +41,7 @@ function generateObjects(userlevel) {
 }
 
 var audioPlaying = [];
-var shouldPlayAudio = false;
+var shouldPlayAudio = true;
 var player;
 Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
