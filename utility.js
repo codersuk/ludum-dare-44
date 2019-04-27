@@ -21,3 +21,7 @@ function stopTimer(){
     console.log(`Totle Time ${GAME_TIME}`);
 
 }
+
+function getRandomInteger(min, max) {
+	return Math.floor(Math.random() * max) + min;
+}

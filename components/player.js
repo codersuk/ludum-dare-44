@@ -9,7 +9,7 @@ Crafty.c("Player", {
 		this.vx += MOVE_RIGHT_RATE_PLAYER;
 		this.onHit("BountyHunter", function (hitData) {
 
-			Crafty.trigger(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT)
+			   Crafty.trigger(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT)
 		});
 		this.hasDoubleJumpPowerUp = true;
 		//double jump check
@@ -26,7 +26,7 @@ Crafty.c("Player", {
 			this.hasDoubleJumpPowerUp = true; // give this new double jump powerup upon landing
 		});
 
-	//	Add component
+	  //	Add component
 		this.bind("KeyDown",function(e){
 
 			//if player keys 'space bar' it shoots something

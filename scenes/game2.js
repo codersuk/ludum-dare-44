@@ -1,15 +1,4 @@
 
-
-var PLAYER_HIT_POWER_EVENT = "PLAYER_HIT_POWER_EVENT";
-var PLAYER_HIT_OBSTACLE_EVENT = "PLAYER_HIT_OBSTACLE_EVENT";
-var BOUNTY_HUNTER_HIT_OBSTACLE_EVENT = "BOUNTY_HUNTER_HIT_OBSTACLE_EVENT";
-
-var objects = [
-	 WOODENLOG, STONE, PUDDLE,
-	 FIRE, SMOKE, ANGRYBIRD
-];
-
-
 function makeCameraTrackEntity(entity, yoffset) {
     // Sets up the Camera Tracking to the player entity
     Crafty.viewport.clampToEntities = false;
