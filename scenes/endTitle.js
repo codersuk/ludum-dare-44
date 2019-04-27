@@ -31,7 +31,7 @@ Crafty.defineScene("EndTitle", function () {
         StartGame.bind('Click', function (MouseEvent) {
             // TODO: add scene link to start game
             // alert('Yay Start game');
-            Crafty.scene('EndTitle');
+            Crafty.scene('Game2');
         });
 
     //    bind enter Button to start game
@@ -41,7 +41,7 @@ Crafty.defineScene("EndTitle", function () {
             if (e.key == 13) {
                 // TODO: add scene link to start game here
                 alert('Enter clicked');
-                Crafty.scene('EndTitle');
+                Crafty.scene('Game2');
             }
         });
 
