@@ -20,21 +20,28 @@ function sceneCountdown() {
     }, 1000);
 }
 
-function generateObjects() {
+var objIndex = 0;
+function generateObjects(userlevel) {
 	setTimeout(function() {
-		var obj = objects[getRandomInteger(0, objects.length)];
+		console.log("Generating obj");
+		var obj;
+		var objects = levels[userlevel];
+		
+		//if goes out of the index boundary
+		if(objIndex >= objects.length) {
+			objIndex = 0;
+		}
+
+		//get the object
+		obj = objects[objIndex++];
 		Crafty.e(obj);
-		generateObjects();
-	}, getRandomInteger(3,7) * 100);
+		generateObjects(userlevel);
+
+	}, getRandomInteger(3,7) * 1000);
 }
 
-// function t() {
-// 	var obj = objects[getRandomInteger(0, objects.length)];
-// 	Crafty.e(obj);
-// 	setTimeout(t, getRandomInteger(2,10) * 1000)	
-// }
 var player;
-Crafty.defineScene("Game2", function () {
+Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
 
     var scene1BG = Crafty.e('Scene1BG')
@@ -44,8 +51,11 @@ Crafty.defineScene("Game2", function () {
     var bountyhunter = Crafty.e('BountyHunter')
     //TODO: load the course environment here
 
+	//reset object index
+	objIndex = 0;
+
 	//draw obstacles/powerups
-	var fn_generateObj = generateObjects();
+	generateObjects(userlevel);
 
     //Loads the Scene timer
     sceneCountdown();
@@ -55,7 +65,7 @@ Crafty.defineScene("Game2", function () {
 });
 
 Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
-    Crafty.scene("Game2")
+    Crafty.scene("Game2", current_level)
 })
 
 
