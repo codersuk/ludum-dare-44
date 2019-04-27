@@ -36,16 +36,21 @@ function sceneCountdown() {
 }
 
 Crafty.defineScene("Game2", function () {
+
+    //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
+
+    var scene1BG = Crafty.e('Scene1BG')
     var platform = Crafty.e('Platform')
     var player = Crafty.e('Player')
     var bountyhunter = Crafty.e('BountyHunter')
+
     //TODO: load the course environment here
 
 
     //Loads the Scene timer
     sceneCountdown();
 
-    // TODO Offset calculation isn't right, close enough for now.
+    // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(player, DOUBLE_UNIT + SINGLE_UNIT)
 });
 
