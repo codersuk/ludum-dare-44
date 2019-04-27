@@ -11,19 +11,12 @@ function makeCameraTrackEntity(entity, yoffset) {
 
 function sceneCountdown() {
     var time = Crafty.e('Countdown')
-        .setCountdownOverAction(function () {
-            clearInterval(gameInterval);
-        })
-
-    var gameInterval = setInterval(function () {
-        Crafty.trigger("UpdateTime");
-    }, 1000);
 }
 
 var objIndex = 0;
+
 function generateObjects(userlevel) {
 	setTimeout(function() {
-		console.log("Generating obj");
 		var obj;
 		var objects = levels[userlevel];
 		
@@ -45,6 +38,7 @@ var shouldPlayAudio = true;
 var player;
 Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
+    console.log("Game2 Loaded")
     audioPlaying.push("ambient-background-fastest")
     if( shouldPlayAudio ) {
         Crafty.audio.play("ambient-background-fastest", -1, 0.2);
@@ -68,6 +62,7 @@ Crafty.defineScene("Game2", function (userlevel) {
     // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT + SINGLE_UNIT)
 }, function () {
+    console.log("Game2 UnLoaded")
     for (var i = audioPlaying.length - 1; i >= 0; i--) {
         Crafty.audio.stop(audioPlaying[i]);
     }

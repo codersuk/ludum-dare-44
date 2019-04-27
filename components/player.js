@@ -27,7 +27,6 @@ Crafty.c("Player", {
 			//if player keys 'space bar' it shoots something
 			//TODO bind a different key if needed
 			if(e.key == 32){
-				console.log('PEWPEW');
 				let tempItem = Crafty.e('Projectile')
 				tempItem.x = this.x+this.w +10;
 				tempItem.y = this.y;
@@ -42,7 +41,6 @@ Crafty.c("Player", {
 					this.color('#fff',0);
 				}.bind(tempItem),700)
 			}
-			// console.log(this.x);
 
 
 		})
@@ -87,7 +85,6 @@ Crafty.c("Player", {
 	},
 
 	stopMoving : function () {
-		console.log("test")
 		this.vx = 0;
 	},
 
