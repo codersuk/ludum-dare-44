@@ -60,9 +60,9 @@ Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
 })
 
 
-Crafty.bind(PLAYER_HIT_POWER_EVENT, function (hitData) {
+Crafty.bind(PLAYER_HIT_POWER_EVENT, function (obj) {
 	//destroy the obj
-    hitData[0].obj.destroy();
+	obj.destroy();
 })
 
 Crafty.bind(PLAYER_HIT_OBSTACLE_EVENT, function (hitData) {
