@@ -3,6 +3,16 @@ var DOUBLE_UNIT = 128;
 
 var PLAYER_HIT_BOUNTY_HUNTER_EVENT = "PLAYER_HIT_BOUNTY_HUNTER_EVENT";
 
+var PLAYER_HIT_POWER_EVENT = "PLAYER_HIT_POWER_EVENT";
+var PLAYER_HIT_OBSTACLE_EVENT = "PLAYER_HIT_OBSTACLE_EVENT";
+var BOUNTY_HUNTER_HIT_OBSTACLE_EVENT = "BOUNTY_HUNTER_HIT_OBSTACLE_EVENT";
+
+var objects = [
+	 WOODENLOG, STONE, PUDDLE,
+	 FIRE, SMOKE, ANGRYBIRD
+];
+
+
 function makeCameraTrackEntity(entity, yoffset) {
     Crafty.viewport.clampToEntities = false;
     Crafty.viewport.scale(1);
@@ -36,21 +46,30 @@ function sceneCountdown() {
     }, 1000);
 }
 
+function generateObjects() {
+	setTimeout(function() {
+		var obj = objects[getRandomInteger(0, objects.length)];
+		Crafty.e(obj);
+		generateObjects();
+	}, getRandomInteger(2,5) * 1000);
+}
+
+// function t() {
+// 	var obj = objects[getRandomInteger(0, objects.length)];
+// 	Crafty.e(obj);
+// 	setTimeout(t, getRandomInteger(2,10) * 1000)	
+// }
+var player;
 Crafty.defineScene("Game2", function () {
-    var platform = Crafty.e('Platform')
-    var player = Crafty.e('Player')
+	var platform = Crafty.e('Platform')
+	player = Crafty.e('Player')
 	var bountyhunter = Crafty.e('BountyHunter')
 
-
-	var obstacle_woodenlog = Crafty.e('WoodenLog')
-	var obstacle_stone = Crafty.e('Stone')
-	var obstacle_puddle = Crafty.e('Puddle')
-
-	var power_fire = Crafty.e('Fire')
-	var power_smoke = Crafty.e('Smoke')
-	var power_angrybird = Crafty.e('AngryBird')
+	
     //TODO: load the course environment here
 
+	//draw obstacles/powerups
+	var fn_generateObj = generateObjects();
 
     //Loads the Scene timer
     sceneCountdown();
@@ -61,4 +80,18 @@ Crafty.defineScene("Game2", function () {
 
 Crafty.bind(PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
     Crafty.scene("Game2")
+})
+
+
+Crafty.bind(PLAYER_HIT_POWER_EVENT, function (hitData) {
+	//destroy the obj
+    hitData[0].obj.destroy();
+})
+
+Crafty.bind(PLAYER_HIT_OBSTACLE_EVENT, function (hitData) {
+    //slow down player
+})
+
+Crafty.bind(BOUNTY_HUNTER_HIT_OBSTACLE_EVENT, function (hitData) {
+	//make it jump
 })
