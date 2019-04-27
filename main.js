@@ -5,4 +5,4 @@ var GAME_TIME = 0;
 
 Crafty.init(GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT, document.getElementById('game'));
 
-Crafty.scene("Loading");
+Crafty.scene("Game2");
