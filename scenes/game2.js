@@ -12,10 +12,36 @@ function makeCameraTrackEntity(entity, yoffset) {
 	Crafty.viewport.centerOn(entity, 10);
 }
 
+function sceneCountdown() {
+	var totalSeconds = 2 * 60;
+	var time = Crafty.e('2D, DOM, Text') 
+		.attr({w: 50, h: 100, x: 700, y: 20})
+		.text("02:00")
+		.bind("UpdateTime", function(){
+			//calculate time
+			totalSeconds -= 1;
+			var minutes = parseInt(totalSeconds / 60);
+			var seconds = totalSeconds % 60;
+			if(totalSeconds <= 0) {
+				clearInterval(gameInterval);
+			}
+
+			//update time text
+			this.text(("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2));
+
+		});
+
+	var gameInterval = setInterval(function () {
+		Crafty.trigger("UpdateTime");
+	}, 1000);
+}
+
 Crafty.defineScene("Game2", function() {
 	var platform = Crafty.e('Platform')
 	var player = Crafty.e('Player')
 	var bountyhunter = Crafty.e('BountyHunter')
+
+	sceneCountdown();
 
 	// TODO Offset calculation isn't right, close enough for now.
 	makeCameraTrackEntity(player, DOUBLE_UNIT  + SINGLE_UNIT)
