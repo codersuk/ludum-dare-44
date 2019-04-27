@@ -1,5 +1,4 @@
-var SINGLE_UNIT = 64;
-var DOUBLE_UNIT = 128;
+
 
 function makeCameraTrackEntity(entity, yoffset) {
     Crafty.viewport.clampToEntities = false;
@@ -7,7 +6,7 @@ function makeCameraTrackEntity(entity, yoffset) {
     Crafty.one("CameraAnimationDone", function () {
         Crafty.viewport.follow(entity, 0, 0 + yoffset);
     });
-    Crafty.viewport.centerOn(entity, 10);
+    Crafty.viewport.centerOn(entity, 0);
 }
 
 function sceneCountdown() {
