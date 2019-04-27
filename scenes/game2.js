@@ -46,10 +46,11 @@ function sceneCountdown() {
 
 function generateObjects() {
 	setTimeout(function() {
+		console.log("Generating obj");
 		var obj = objects[getRandomInteger(0, objects.length)];
 		Crafty.e(obj);
 		generateObjects();
-	}, getRandomInteger(2,5) * 1000);
+	}, getRandomInteger(3,7) * 1000);
 }
 
 // function t() {
