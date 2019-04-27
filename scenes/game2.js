@@ -24,7 +24,6 @@ var objIndex = 0;
 
 function generateObjects(userlevel) {
 	setTimeout(function() {
-		console.log("Generating obj");
 		var obj;
 		var objects = levels[userlevel];
 		
