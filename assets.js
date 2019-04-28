@@ -19,11 +19,7 @@ var gameAssets = {
             "tileh": 192,
             "map": {"bountyHunter": [0, 0]}
         },
-        "images/sprites/Log64x64.png": {
-            "tile": 64,
-            "tileh": 64,
-            "map": {"woodenlog": [0, 0]}
-        },
+        
         "images/sprites/grass.png": {
             "tile": 64,
             "tileh": 64,
@@ -39,9 +35,9 @@ var gameAssets = {
             "tileh": 64,
             "map": {"stone": [0, 0]}
         },
-        "images/sprites/woodenlog.png": {
-            "tile": 100,
-            "tileh": 32,
+        "images/sprites/Log64x64.png": {
+            "tile": 64,
+            "tileh": 64,
             "map": {"woodenlog": [0, 0]}
         },
 
@@ -50,15 +46,15 @@ var gameAssets = {
             "tileh": 32,
             "map": {"angrybird": [0, 0]}
         },
-        "images/sprites/powerUp2.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"powerUp2": [0, 0]}
+        "images/sprites/fire.png": {
+            "tile": 32,
+            "tileh": 32,
+            "map": {"fire": [0, 0]}
         },
-        "images/sprites/powerUp3.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"powerUp3": [0, 0]}
+        "images/sprites/wind.png": {
+            "tile": 64,
+            "tileh": 64,
+            "map": {"wind": [0, 0]}
         },
 
     },
