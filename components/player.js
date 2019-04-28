@@ -148,20 +148,25 @@ Crafty.c("Player", {
     doubleJump: function (ground) {
         if (!ground && this.hasDoubleJumpPowerUp) {
             this.canJump = true;
-            this.jumpSpeed(350);
+            this.jumpSpeed(300);
+            //Reset double jump
             this.hasDoubleJumpPowerUp = false;
+
         }
     },
 
     setupJumping: function () {
+        //Assign double jump on power up?
         this.hasDoubleJumpPowerUp = true;
         //double jump check
         //Use default template online
         this.bind("CheckJumping", function (ground) {
+            this.animate('PlayerJumping',1)
             this.doubleJump(ground)
         });
         this.bind("LandedOnGround", function (ground) {
             this.jumpSpeed(300);
+            this.animate("PlayeRunning", -1);
             this.hasDoubleJumpPowerUp = true; // give this new double jump powerup upon landing
         });
     },
