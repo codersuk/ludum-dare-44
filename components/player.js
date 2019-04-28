@@ -16,6 +16,7 @@ Crafty.c("Player", {
         this.savedVx = this.velocity().x;
         this.setupJumping();
         this.setupActionForHitting(SPEED, this.increaseSpeed);
+        this.setupActionForHitting(FIRE, this.blastFire);
         this.setupActionForHitting(STONE, this.stopMoving, this.startMoving);
         this.setupActionForHitting(WOODENLOG, this.stopMoving, this.startMoving);
         this.setupActionForHitting("BountyHunter", function (hitData) {
@@ -34,6 +35,24 @@ Crafty.c("Player", {
         }, 800); 
     },
 
+    blastFire: function() {
+        this.animate('PlayerReverseRunning', -1)
+        var player = this;
+
+        let tempItem = Crafty.e('Projectile, Delay')
+        tempItem.x = this.x - this.w - 20;
+        tempItem.y = this.y;
+        tempItem.delay(function () {
+            this.color('#fff', 0.3);
+
+        }, 400, 1);
+        tempItem.delay(function () {
+            player.animate('PlayeRunning', -1);
+            this.destroy();
+        }, 700, 1);
+
+    },
+
     /*
     Animation start
      */
@@ -50,6 +69,16 @@ Crafty.c("Player", {
                 [0, 3]
             ]
         )
+
+        this.reel('PlayerReverseRunning',
+        300,
+        [
+            [1, 0],
+            [1, 1],
+            [1, 2],
+            [1, 3]
+        ]
+    )
 
         //Animation for when the player jumping
         this.reel('PlayerJumping',
