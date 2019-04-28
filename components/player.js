@@ -2,20 +2,20 @@ Crafty.c("Player", {
 
     //TODO: define the size of the Player 64x64 or 128x64?
     init: function () {
-        this.requires('2D, DOM, Collision, Motion, Mouse, Gravity, Jumper, player, Keyboard, SpriteAnimation')
+        this.requires('2D, DOM, Collision, Motion, Mouse, Gravity, Delay, Jumper, player, Keyboard, SpriteAnimation')
         this.attr({
             x: GAME_SCREEN_WIDTH / 2,
             y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - SINGLE_UNIT,
             w: SINGLE_UNIT,
             h: DOUBLE_UNIT
         })
-
         this.jumper(300, ['UP_ARROW', 'W']);
         this.gravity("Platform");
         this.vx += MOVE_RIGHT_RATE_PLAYER;
         this.ax += MOVE_RIGHT_ACCELERATION_RATE_PLAYER;
         this.savedVx = this.velocity().x;
         this.setupJumping();
+        this.setupActionForHitting(SPEED, this.increaseSpeed);
         this.setupActionForHitting(STONE, this.stopMoving, this.startMoving);
         this.setupActionForHitting(WOODENLOG, this.stopMoving, this.startMoving);
         this.setupActionForHitting("BountyHunter", function (hitData) {
@@ -24,6 +24,14 @@ Crafty.c("Player", {
         this.setupPlayerControls();
         this.setupAnimation();
         //	Setup the animation
+    },
+
+    increaseSpeed : function () {
+        this.vx += 120; 
+
+        this.delay(function () {
+            this.vx -= 120;
+        }, 800); 
     },
 
     /*
@@ -95,7 +103,7 @@ Crafty.c("Player", {
             }
             this.trigger("PLAYER_HIT_" + objectToHit);
         }, function (hitData) {
-            if (isObjectNotNull(onHit)) {
+            if (isObjectNotNull(offHit)) {
                 offHit.call(this);
             }
             this.trigger("PLAYER_STOPPED_HITTING_" + objectToHit);
