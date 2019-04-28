@@ -8,5 +8,8 @@ Crafty.c("Obstacle", {
         this.onHit("BountryHunter", function (hitData) {
 			Crafty.trigger(BOUNTY_HUNTER_HIT_OBSTACLE_EVENT, this)
 		}) 
+    },
+    changePosition: function(newPosition) {
+        this.x = newPosition;
     }
 })

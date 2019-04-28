@@ -14,22 +14,15 @@ function sceneCountdown() {
 }
 
 var levelObjIndex = 0;
-var objAppearanceDelay; // delay function
-function setObjectGenerationTimeout(userlevel) {
-    objAppearanceDelay = Crafty.e("Delay").delay(function() {
-        var objects = levels[userlevel];
-        
-        //if goes out of the index boundary
-        if(levelObjIndex >= objects.length) {
-            return;
-        }
-    
-        //get the object
+var position = 0
+function placeObjectsOnScreen(userlevel) {
+    var objects = levels[userlevel];  
+    for(var i = 0; i < objects.length; i++)
+    {
+        position += getRandomInteger(200, 400);
         var obj = objects[levelObjIndex++];
-        Crafty.e(obj);
-       
-        setObjectGenerationTimeout(userlevel);
-    }, getRandomInteger(3, 7) * 1000, 0) 
+        var craftyObj = Crafty.e(obj).changePosition(position);
+    }
 }
 
 var GhostPlayer;
@@ -44,24 +37,24 @@ Crafty.defineScene("Game2", function (userlevel) {
     //TODO: load the course environment here
 
 	resetVariables();
-	//set timeout function to draw objects
-    setObjectGenerationTimeout(userlevel);
-
+    placeObjectsOnScreen(userlevel);
+    
     //Loads the Scene timer
     sceneCountdown();
 
     // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT + SINGLE_UNIT)
 }, function () {
-    console.log("Game2 UnLoaded")
+    console.log("Game2 UnLoaded");
 });
 
 function resetVariables() {
     //reset object index
     levelObjIndex = 0;
+    position = GAME_SCREEN_WIDTH;
 }
 
-Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
+Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () { 
     Crafty.scene("Game2", current_level)
 })
 

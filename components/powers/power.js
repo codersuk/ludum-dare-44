@@ -4,5 +4,8 @@ Crafty.c("Power", {
         this.onHit("Player", function (hitData) {
 			Crafty.trigger(PLAYER_HIT_POWER_EVENT, this)
         })
+    },
+    changePosition: function(newPosition) {
+        this.x = newPosition;
     }
 })
