@@ -6,7 +6,7 @@ Crafty.c("Detector", {
 		this.onHit("Obstacle", function (hitData, firstHit) {
 			if(firstHit) {
 				if(this.jumpChance > Math.floor(Math.random()*100)) {
-					Crafty.trigger("Jump");
+					Crafty.trigger("WizardJump");
 					console.log(this.color())
 				}
 			}
@@ -29,7 +29,7 @@ Crafty.c("BountyHunter", {
 		this.jumpSpeed(200)
   		this.gravity("Platform");
 		this.jumper(300, ['T']);
-		Crafty.bind("Jump", function () {
+		Crafty.bind("WizardJump", function () {
 			console.log("Wizard jumps")
 			this.jump();
 		}.bind(this));
