@@ -1,18 +1,18 @@
 --- 
+version: 2.1
 orbs: 
   aws-s3: circleci/aws-s3@1.0.8
-version: 2.1
 workflows: 
   build-test-deploy: 
     jobs: 
       - 
         deploy2s3: 
-          steps: 
-            - 
-              aws-s3/sync: 
-                arguments: |
-                    --exclude '.circleci/*' \
-                    --exclude '.git/*'
-                from: .
-                overwrite: true
-                to: "s3://ludum-dare-44/${CIRCLE_BRANCH}"
+        steps: 
+          - 
+            aws-s3/sync: 
+              arguments: |
+                  --exclude '.circleci/*' \
+                  --exclude '.git/*'
+              from: .
+              overwrite: true
+              to: "s3://ludum-dare-44/${CIRCLE_BRANCH}"
