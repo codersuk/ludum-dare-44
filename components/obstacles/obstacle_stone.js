@@ -1,5 +1,5 @@
-var stone_width = 10;
-var stone_height = 10;
+var stone_width = 50;
+var stone_height = 50;
 
 Crafty.c(STONE, {
 	init : function () {

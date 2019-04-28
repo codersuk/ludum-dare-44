@@ -13,7 +13,7 @@ function sceneCountdown() {
     var time = Crafty.e('Countdown')
 }
 
-var objIndex = 0;
+var levelIndex = 2;
 
 function generateObjects(userlevel) {
 	setTimeout(function() {
@@ -21,16 +21,16 @@ function generateObjects(userlevel) {
 		var objects = levels[userlevel];
 		
 		//if goes out of the index boundary
-		if(objIndex >= objects.length) {
-			objIndex = 0;
+		if(levelIndex >= objects.length) {
+			levelIndex = 0;
 		}
 
 		//get the object
-		obj = objects[objIndex++];
+		obj = objects[levelIndex++];
 		Crafty.e(obj);
 		generateObjects(userlevel);
 
-	}, getRandomInteger(3,7) * 1000);
+	}, getRandomInteger(1,2) * 1000);
 }
 
 var player;
@@ -45,7 +45,7 @@ Crafty.defineScene("Game2", function (userlevel) {
     //TODO: load the course environment here
 
 	//reset object index
-	objIndex = 0;
+	levelIndex = 2;
 
 	//draw obstacles/powerups
 	generateObjects(userlevel);

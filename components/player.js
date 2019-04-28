@@ -12,6 +12,8 @@ Crafty.c("Player", {
 		this.jumper(300, ['UP_ARROW', 'W']);
   		this.gravity("Platform");
 		this.vx += MOVE_RIGHT_RATE_PLAYER;
+		this.ax += MOVE_RIGHT_ACCELERATION_RATE_PLAYER;
+		this.savedVx = this.velocity().x;
 		this.setupJumping();
 		this.setupActionForHitting(STONE, this.stopMoving, this.startMoving);
 		this.setupActionForHitting(WOODENLOG, this.stopMoving, this.startMoving);
@@ -52,8 +54,8 @@ Crafty.c("Player", {
 	},
 
 	setupActionForHitting : function (objectToHit, onHit, offHit) {
-		this.onHit(objectToHit, function (hitData) {
-			if(isObjectNotNull(onHit)) {
+		this.onHit(objectToHit, function (hitData, firstHit) {
+			if(isObjectNotNull(onHit) && firstHit) {
 				onHit.call(this);
 			}
 			this.trigger("PLAYER_HIT_"+objectToHit);
@@ -94,10 +96,11 @@ Crafty.c("Player", {
 	},
 
 	stopMoving : function () {
+		this.savedVx = this.velocity().x;
 		this.vx = 0;
 	},
 
 	startMoving : function () {		
-		this.vx = MOVE_RIGHT_RATE_PLAYER;
+		this.vx = this.savedVx;
 	}
 });
