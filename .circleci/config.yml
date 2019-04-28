@@ -1,17 +1,18 @@
+--- 
+orbs: 
+  aws-s3: circleci/aws-s3@1.0.8
 version: 2.1
- 
-orbs:
-  aws-s3: circleci/aws-s3@1.0.0 #imports the s3 orb in the circleci namespace
-
-workflows:
-  build-test-deploy:
-    jobs:
-      - deploy2s3:
-        steps:
-          - aws-s3/sync: #invokes the sync command declared in the s3 orb
-              from: .
-             to: "s3://ludum-dare-44/${CIRCLE_BRANCH}"
-             arguments: |
-               --exclude '.circleci/*' \
-               --exclude '.git/*' 
-             overwrite: true
+workflows: 
+  build-test-deploy: 
+    jobs: 
+      - 
+        deploy2s3: 
+          steps: 
+            - 
+              aws-s3/sync: 
+                arguments: |
+                    --exclude '.circleci/*' \
+                    --exclude '.git/*'
+                from: .
+                overwrite: true
+                to: "s3://ludum-dare-44/${CIRCLE_BRANCH}"
