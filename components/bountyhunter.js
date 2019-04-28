@@ -1,7 +1,7 @@
 Crafty.c("Detector", {
 	init : function () {
 		this.requires('2D, DOM, Collision, Color')
-		this.attr({x: GAME_SCREEN_WIDTH / 25 + 96 * 1.35, y: GAME_SCREEN_HEIGHT - 48 - 2, w: 48, h: 48})
+		this.attr({x: GAME_SCREEN_WIDTH / 25 + 96 * 1.35, y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - 48 - 2, w: 48, h: 48})
 		this.jumpChance = 101;
 		this.onHit("Obstacle", function (hitData, firstHit) {
 			if(firstHit) {
@@ -30,7 +30,7 @@ Crafty.c("BountyHunter", {
   		this.gravity("Platform");
 		this.setupActionForHitting("Projectile", this.slowDownWitch),
 		Crafty.bind("WizardJump", function () {
-			// console.log("Wizard jumps")
+			console.log("Wizard jumps")
 			this.jump();
 		}.bind(this));
 	},
