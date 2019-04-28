@@ -18,6 +18,7 @@ Crafty.c("Player", {
         this.setupActionForHitting(SPEED, this.increaseSpeed);
         this.setupActionForHitting(FIRE, this.blastFire);
         this.setupActionForHitting(PUDDLE, this.decreaseSpeed);
+        this.setupActionForHitting(ANGRYBIRD, this.decreaseSpeed);
         this.setupActionForHitting(STONE, this.stopMoving, this.startMoving);
         this.setupActionForHitting(WOODENLOG, this.stopMoving, this.startMoving);
         this.setupActionForHitting("BountyHunter", function (hitData) {
