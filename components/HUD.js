@@ -5,6 +5,7 @@ Crafty.c("HUD", {
 
     fixedPosition: function(x, y) {
          this.fixedX = x; this.fixedY=y;
+         return this;
     },
 
     adjustPosition: function() {

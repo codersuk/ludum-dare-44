@@ -29,11 +29,10 @@ var GhostPlayer;
 Crafty.defineScene("Game2", function (userlevel) {
     // console.log("Game2 Loaded")
 
-
     Crafty.e('sceneLayer1');
     Crafty.e('sceneLayer2');
     Crafty.e('sceneLayer3');
-    Crafty.e('sceneLayer4'); // grass
+    Crafty.e('sceneLayer4');
     var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
     GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)

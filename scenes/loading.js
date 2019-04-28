@@ -12,7 +12,7 @@ Crafty.defineScene("Loading", function() {
     // var gameAssets = {}; // defined already in assets.js
 
   	Crafty.load(gameAssets, function(){
-
+        
         // console.log(gameAssets);
          //  Load the first scene here
          Crafty.scene('Start');
