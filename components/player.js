@@ -1,4 +1,5 @@
 Crafty.c("Player", {
+
 	//TODO: define the size of the Player 64x64 or 128x64?
 	init : function () {
 		this.requires('2D, DOM, Collision, Motion, Mouse, Gravity, Jumper, player, Keyboard')
@@ -23,8 +24,10 @@ Crafty.c("Player", {
 		this.setupPlayerControls();
 	},
 
-	setupPlayerControls : function () {
-		this.bind("KeyDown",function(e){
+
+    setupPlayerControls: function () {
+        this.bind("KeyDown", function (e) {
+
 
 			//if player keys 'space bar' it shoots something
 			//TODO bind a different key if needed
@@ -33,10 +36,12 @@ Crafty.c("Player", {
 				tempItem.x = this.x+this.w +10;
 				tempItem.y = this.y;
 
-				setTimeout(function(){
-					this.color('#fff',0.3);
 
-				}.bind(tempItem),400)
+                setTimeout(function () {
+                    this.color('#fff', 0.3);
+
+                }.bind(tempItem), 400)
+
 
 				setTimeout(function () {
 					//TODO: add a gradual effect to the component and delete 
@@ -66,13 +71,15 @@ Crafty.c("Player", {
 			this.trigger("PLAYER_STOPPED_HITTING_"+objectToHit);
 		});
 
-		this.bind("PLAYER_HIT_"+objectToHit, function (){
-			console.log("PLAYER_HIT_"+objectToHit);
-		})
-		this.bind("PLAYER_STOPPED_HITTING_"+objectToHit, function (){
-			console.log("PLAYER_HIT_"+objectToHit);
-		})
-	},
+
+        this.bind("PLAYER_HIT_" + objectToHit, function () {
+            console.log("PLAYER_HIT_" + objectToHit);
+        })
+        this.bind("PLAYER_STOPPED_HITTING_" + objectToHit, function () {
+            console.log("PLAYER_HIT_" + objectToHit);
+        })
+    },
+
 
 	doubleJump : function(ground) {
 		if (!ground && this.hasDoubleJumpPowerUp) {
@@ -103,4 +110,5 @@ Crafty.c("Player", {
 	startMoving : function () {		
 		this.vx = this.savedVx;
 	}
+
 });
