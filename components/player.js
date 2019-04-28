@@ -1,7 +1,7 @@
 Crafty.c("Player", {
 	//TODO: define the size of the Player 64x64 or 128x64?
 	init : function () {
-		this.requires('2D, DOM, Collision, Motion, Gravity, Jumper, player, Keyboard')
+		this.requires('2D, DOM, Collision, Motion, Mouse, Gravity, Jumper, player, Keyboard')
 		this.attr({
 			x: GAME_SCREEN_WIDTH / 2,
 			y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - SINGLE_UNIT,
@@ -44,6 +44,11 @@ Crafty.c("Player", {
 
 
 		})
+
+	    this.bind('Click', function (ground) {
+		    Crafty.log('A finger moves over the entity at');
+       		this.jump();
+		 })
 	},
 
 	setupActionForHitting : function (objectToHit, onHit, offHit) {
@@ -67,16 +72,20 @@ Crafty.c("Player", {
 		})
 	},
 
+	doubleJump : function(ground) {
+		if (!ground && this.hasDoubleJumpPowerUp) {
+			this.canJump = true;
+			this.jumpSpeed(350);
+			this.hasDoubleJumpPowerUp = false;
+		}
+	},
+
 	setupJumping : function () {
 		this.hasDoubleJumpPowerUp = true;
 		//double jump check
 		//Use default template online
-		this.bind("CheckJumping", function(ground) {
-			if (!ground && this.hasDoubleJumpPowerUp) {
-				this.canJump = true;
-				this.jumpSpeed(350);
-				this.hasDoubleJumpPowerUp = false;
-			}
+		this.bind("CheckJumping", function (ground) {
+			 this.doubleJump(ground)
 		});
 		this.bind("LandedOnGround", function(ground) {
 			this.jumpSpeed(300);
