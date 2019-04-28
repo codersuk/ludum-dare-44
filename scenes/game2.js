@@ -30,7 +30,7 @@ function generateObjects(userlevel) {
 		Crafty.e(obj);
 		generateObjects(userlevel);
 
-	}, getRandomInteger(1,2) * 1000);
+	}, getRandomInteger(3,8) * 1000);
 }
 
 var player;
@@ -42,6 +42,19 @@ Crafty.defineScene("Game2", function (userlevel) {
     player = Crafty.e('Player')
     var GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
     var bountyhunter = Crafty.e('BountyHunter')
+    var bountyhunterJumpDetector = Crafty.e('Detector')
+        .setJumpChance(40)
+        // .color('#333')
+    var bountyhunterJumpDetector2 = Crafty.e('Detector')
+        .attr({x: GAME_SCREEN_WIDTH / 25 + 96})
+        .setJumpChance(60)
+        // .color('#534')
+    var bountyhunterJumpDetector3 = Crafty.e('Detector')
+        .attr({x: GAME_SCREEN_WIDTH / 25 + 50})
+        // .color('#274')
+    bountyhunter.attach(bountyhunterJumpDetector);
+    bountyhunter.attach(bountyhunterJumpDetector2);
+    bountyhunter.attach(bountyhunterJumpDetector3);
     //TODO: load the course environment here
 
 	//reset object index
