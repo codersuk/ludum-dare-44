@@ -1,5 +1,5 @@
-var stone_width = 64;
-var stone_height = 64;
+var stone_width = 92;
+var stone_height = 60;
 // TODO: check stone dimensions
 Crafty.c(STONE, {
 	init : function () {

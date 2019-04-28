@@ -31,9 +31,9 @@ var gameAssets = {
             "tileh": 10,
             "map": {"puddle": [0, 0]}
         },
-        "images/sprites/stone.png": {
-            "tile": 64,
-            "tileh": 64,
+        "images/sprites/Rock92x60.png": {
+            "tile": 92,
+            "tileh": 60,
             "map": {"stone": [0, 0]}
         },
         "images/sprites/Log64x64.png": {
