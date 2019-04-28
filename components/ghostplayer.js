@@ -4,7 +4,7 @@ Crafty.c("GhostPlayer", {
     init : function () {
 
         this.requires('2D, DOM,  Motion, Gravity')
-        this.attr({x: GAME_SCREEN_WIDTH / 2, y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - SINGLE_UNIT, w: DOUBLE_UNIT, h: SINGLE_UNIT})
+        this.attr({x: GAME_SCREEN_WIDTH / 2, y: GAME_SCREEN_HEIGHT - DISTANCE_UP_FROM_BOTTOM_OF_SCREEN - SINGLE_UNIT, w: DOUBLE_UNIT, h: SINGLE_UNIT})
 
         this.gravity("Platform");
         this.vx += MOVE_RIGHT_RATE_PLAYER; //Use same rate as player. This needs to be reset if the original Player Component is changed.
