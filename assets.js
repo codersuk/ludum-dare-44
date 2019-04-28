@@ -11,7 +11,8 @@ var gameAssets = {
     "sprites": {
         "images/sprites/Dragonsprite64x124.png": {
             "tile": 64,
-            "tileh": 128,
+            "tileh": 124,
+            "paddingY":1,
             "map": {"player": [0, 0]}
         },
         "images/sprites/Wizard96x192.png": {
