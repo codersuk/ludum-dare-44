@@ -34,7 +34,7 @@ Crafty.c("Player", {
 
         //Define the running animation
         this.reel('PlayeRunning',
-            300,
+            400,
             [
                 [0, 0],
                 [0, 1],

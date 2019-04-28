@@ -6,9 +6,9 @@ Crafty.c("sceneLayer2", {
         //1300 is the width of the image
 
 
-        this.attr({x: 0, y: GAME_SCREEN_HEIGHT - heightOfImage, w: widthOfImage *1, h: heightOfImage});
+        this.attr({x: 0, y: GAME_SCREEN_HEIGHT - heightOfImage, w: widthOfImage *100, h: heightOfImage});
         this.image("images/background/BG3.png", "repeat-x");
-        this.vx -= 70;
+        this.vx -= 25;
 
 
     },
