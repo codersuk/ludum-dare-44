@@ -45,7 +45,7 @@ Crafty.c("Player", {
         tempItem.collision([0 + (this.w/2), 0, this.w, 0, this.w, this.h, 0 + (this.w/2), this.h]);
         tempItem.delay(function () {
             player.animate('PlayeRunning', -1);
-           // this.destroy();
+
         }, 700, 1);
 
     },
@@ -98,23 +98,23 @@ Crafty.c("Player", {
 
             //if player keys 'space bar' it shoots something
             //TODO bind a different key if needed
-            if (e.key == 32) {
-                let tempItem = Crafty.e('Projectile, Delay')
-                tempItem.x = this.x + this.w + 20;
-                tempItem.y = this.y;
-                tempItem.delay(function () {
-                    this.color('#fff', 0.3);
+            // if (e.key == 32) {
+            //     let tempItem = Crafty.e('Projectile, Delay')
+            //     tempItem.x = this.x + this.w + 20;
+            //     tempItem.y = this.y;
+            //     tempItem.delay(function () {
+            //         this.color('#fff', 0.3);
+            //
+            //     }, 400, 1);
+            //     tempItem.delay(function () {
+            //         this.destroy();
+            //     }, 700, 1);
+            //
+            //
+            // }
 
-                }, 400, 1);
-                tempItem.delay(function () {
-                    this.destroy();
-                }, 700, 1);
 
-
-            }
-
-
-        })
+        });
 
         this.bind('Click', function (ground) {
             Crafty.log('A finger moves over the entity at');
