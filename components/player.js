@@ -12,6 +12,7 @@ Crafty.c("Player", {
 		this.jumper(300, ['UP_ARROW', 'W']);
   		this.gravity("Platform");
 		this.vx += MOVE_RIGHT_RATE_PLAYER;
+		this.ax += MOVE_RIGHT__ACCELERATION_RATE_PLAYER;
 		this.setupJumping();
 		this.setupActionForHitting(STONE, this.stopMoving, this.startMoving);
 		this.setupActionForHitting(WOODENLOG, this.stopMoving, this.startMoving);
