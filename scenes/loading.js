@@ -13,14 +13,14 @@ Crafty.defineScene("Loading", function() {
 
   	Crafty.load(gameAssets, function(){
 
-        console.log(gameAssets);
+        // console.log(gameAssets);
          //  Load the first scene here
          Crafty.scene('Start');
 
 
     },  function () {
-      console.log("Crafty Load Issue");
+      // console.log("Crafty Load Issue");
     },  function (e) {
-      console.log("Crafty Load Error", e);
+      // console.log("Crafty Load Error", e);
     });
   });

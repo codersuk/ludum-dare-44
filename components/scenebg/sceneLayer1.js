@@ -16,7 +16,7 @@ Crafty.c("sceneLayer1", {
             //repeat screen until the end of time
             if (this.x <= -(widthOfImage)) {
                 this.x = 0;
-                console.log('setup backgou')
+                // console.log('setup backgou')
             }
         }
     }

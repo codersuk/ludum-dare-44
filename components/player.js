@@ -137,10 +137,10 @@ Crafty.c("Player", {
 
 
         this.bind("PLAYER_HIT_" + objectToHit, function () {
-            console.log("PLAYER_HIT_" + objectToHit);
+            // console.log("PLAYER_HIT_" + objectToHit);
         })
         this.bind("PLAYER_STOPPED_HITTING_" + objectToHit, function () {
-            console.log("PLAYER_HIT_" + objectToHit);
+            // console.log("PLAYER_HIT_" + objectToHit);
         })
     },
 
