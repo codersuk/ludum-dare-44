@@ -115,11 +115,6 @@ Crafty.c("Player", {
 
 
         })
-
-        this.bind('Click', function (ground) {
-            Crafty.log('A finger moves over the entity at');
-            this.jump();
-        })
     },
 
     setupActionForHitting: function (objectToHit, onHit, offHit) {

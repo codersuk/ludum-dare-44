@@ -27,7 +27,6 @@ function placeObjectsOnScreen(userlevel) {
 
 var GhostPlayer;
 Crafty.defineScene("Game2", function (userlevel) {
-
     console.log("Game2 Loaded")
 
 
@@ -38,6 +37,13 @@ Crafty.defineScene("Game2", function (userlevel) {
     var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
     GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
+
+    Crafty.e('ScreenClickable');
+    Crafty.bind("GLOBAL_CLICK", function() {
+        console.log("GLOBAL_CLICK");
+        player.jump();
+    });
+
     var bountyhunter = Crafty.e('BountyHunter')
     var bountyhunterJumpDetector = Crafty.e('Detector')
         .setJumpChance(40)
