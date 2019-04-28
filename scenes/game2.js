@@ -35,9 +35,14 @@ function generateObjects(userlevel) {
 
 var player;
 Crafty.defineScene("Game2", function (userlevel) {
-    //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
+
     console.log("Game2 Loaded")
-    var scene1BG = Crafty.e('Scene1BG')
+
+
+    Crafty.e('sceneLayer1');
+    Crafty.e('sceneLayer2');
+    Crafty.e('sceneLayer3');
+    Crafty.e('sceneLayer4'); // grass
     var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
     var GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
