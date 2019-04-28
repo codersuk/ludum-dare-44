@@ -29,6 +29,7 @@ Crafty.c("BountyHunter", {
 		this.jumpSpeed(200)
   		this.gravity("Platform");
 		this.setupActionForHitting("Projectile", this.slowDownWitch),
+		this.setupActionForHitting(ANGRYBIRD, this.decreaseSpeed),
 		Crafty.bind("WizardJump", function () {
 			// console.log("Wizard jumps")
 			this.jump();
@@ -49,6 +50,13 @@ Crafty.c("BountyHunter", {
             this.vx += 100;
         }, 600);
 	},
+	decreaseSpeed: function() {
+        this.vx -= 50; 
+
+        this.delay(function () {
+            this.vx += 50;
+        }, 1000); 
+    },
 	setupActionForHitting: function (objectToHit, onHit, offHit) {
         this.onHit(objectToHit, function (hitData, firstHit) {
             if (isObjectNotNull(onHit) && firstHit) {
