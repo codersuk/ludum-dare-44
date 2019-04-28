@@ -42,9 +42,9 @@ var gameAssets = {
             "map": {"woodenlog": [0, 0]}
         },
 
-        "images/sprites/angrybird.png": {
-            "tile": 32,
-            "tileh": 32,
+        "images/sprites/angrybird_red.png": {
+            "tile": 50,
+            "tileh": 50,
             "map": {"angrybird": [0, 0]}
         },
         "images/sprites/fire.png": {
