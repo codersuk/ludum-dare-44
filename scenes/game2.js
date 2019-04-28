@@ -40,7 +40,6 @@ Crafty.defineScene("Game2", function (userlevel) {
 
     Crafty.e('ScreenClickable');
     Crafty.bind("GLOBAL_CLICK", function() {
-        console.log("GLOBAL_CLICK");
         player.jump();
     });
 
