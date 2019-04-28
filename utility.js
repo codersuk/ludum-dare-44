@@ -4,6 +4,15 @@ This is a utility page to update and bank the score.
 
 var start, end;
 
+function setTimeout(func, time, callOff) {
+	console.log("Don't use setTimeout, it causes major issues with crafty. Use a Component called Delay.")
+	Crafty.e("Delay").delay(func, time, 0, callOff);
+}
+
+function setInterval(func, time, callOff) {
+    console.log("Don't use setInterval, it causes major issues with crafty. Use a Component called Delay.")
+}
+
 function startTimer(){
 
 //    Start timer
