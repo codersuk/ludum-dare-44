@@ -3,7 +3,7 @@ Crafty.c("Scene1BG", {
         this.requires('2D, DOM, Image,Motion');
         //1300 is the width of the image
         widthOfImage = 1300
-        this.attr({x: 0, y: 0, w: widthOfImage * 3, h: GAME_SCREEN_HEIGHT});
+        this.attr({x: 0, y: 0, w: widthOfImage * 100, h: GAME_SCREEN_HEIGHT});
         this.image("images/sprites/seamless2.jpg", "repeat-x");
         this.vx -= 50;
 

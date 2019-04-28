@@ -9,53 +9,58 @@ var gameAssets = {
     "audio": {},
     "images": [],
     "sprites": {
-        "images/sprites/player.png": {
-            "tile": 128,
-            "tileh": 64,
-            "map": {"player": [0, 0]}
-        },
-
-        "images/sprites/bountyHunter.png": {
+        "images/sprites/Dragonsprite64x124.png": {
             "tile": 64,
             "tileh": 128,
+            "map": {"player": [0, 0]}
+        },
+        "images/sprites/Wizard96x192.png": {
+            "tile": 96,
+            "tileh": 192,
             "map": {"bountyHunter": [0, 0]}
         },
+
         "images/sprites/grass.png": {
             "tile": 64,
             "tileh": 64,
             "map": {"grass": [0, 0]}
         },
-        "images/sprites/obstacle1.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"obstacle1": [0, 0]}
+        "images/sprites/puddle.png": {
+            "tile": 85,
+            "tileh": 10,
+            "map": {"puddle": [0, 0]}
         },
-        "images/sprites/obstacle2.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"obstacle2": [0, 0]}
+        "images/sprites/stone.png": {
+            "tile": 64,
+            "tileh": 64,
+            "map": {"stone": [0, 0]}
         },
-        "images/sprites/obstacle3.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"obstacle3": [0, 0]}
+        "images/sprites/Log64x64.png": {
+            "tile": 64,
+            "tileh": 64,
+            "map": {"woodenlog": [0, 0]}
         },
 
-        "images/sprites/powerUp1.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"powerUp1": [0, 0]}
+        "images/sprites/angrybird.png": {
+            "tile": 32,
+            "tileh": 32,
+            "map": {"angrybird": [0, 0]}
         },
-        "images/sprites/powerUp2.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"powerUp2": [0, 0]}
+        "images/sprites/fire.png": {
+            "tile": 32,
+            "tileh": 32,
+            "map": {"fire": [0, 0]}
         },
-        "images/sprites/powerUp3.png": {
-            "tile": 48,
-            "tileh": 48,
-            "map": {"powerUp3": [0, 0]}
+        "images/sprites/wind.png": {
+            "tile": 64,
+            "tileh": 64,
+            "map": {"wind": [0, 0]}
         },
+        "images/sprites/smoke.png": {
+            "tile": 64,
+            "tileh": 128,
+            "map": {"smoke": [0, 0]}
+        }
 
     },
 };

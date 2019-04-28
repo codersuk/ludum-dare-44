@@ -44,7 +44,6 @@ Crafty.defineScene("Game2", function (userlevel) {
     //TODO: load the course environment here
 
 	resetVariables();
-
 	//set timeout function to draw objects
     setObjectGenerationTimeout(userlevel);
 

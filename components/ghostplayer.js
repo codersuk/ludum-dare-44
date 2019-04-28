@@ -8,6 +8,8 @@ Crafty.c("GhostPlayer", {
 
         this.gravity("Platform");
         this.vx += MOVE_RIGHT_RATE_PLAYER; //Use same rate as player. This needs to be reset if the original Player Component is changed.
+		this.ax += MOVE_RIGHT_ACCELERATION_RATE_PLAYER;
+        
 
     },
 });
