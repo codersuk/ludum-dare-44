@@ -42,13 +42,10 @@ Crafty.c("Player", {
         let tempItem = Crafty.e('Projectile, Delay')
         tempItem.x = this.x - this.w - 20;
         tempItem.y = this.y;
-        tempItem.delay(function () {
-            this.color('#fff', 0.3);
-
-        }, 400, 1);
+        tempItem.collision([0 + (this.w/2), 0, this.w, 0, this.w, this.h, 0 + (this.w/2), this.h]);
         tempItem.delay(function () {
             player.animate('PlayeRunning', -1);
-            this.destroy();
+           // this.destroy();
         }, 700, 1);
 
     },
