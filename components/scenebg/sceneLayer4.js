@@ -8,7 +8,7 @@ Crafty.c("sceneLayer4", {
 
         this.attr({x: 0, y: 35, w: widthOfImage * 100, h: heightOfImage});
         this.image("images/background/BG1.png", "repeat-x");
-        // this.vx -= MOVE_RIGHT_RATE_PLAYER * 2;
+        this.vx -= 40;
 
 
     },
