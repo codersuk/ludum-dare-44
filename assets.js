@@ -19,7 +19,7 @@ var gameAssets = {
             "tileh": 192,
             "map": {"bountyHunter": [0, 0]}
         },
-        
+
         "images/sprites/grass.png": {
             "tile": 64,
             "tileh": 64,
@@ -56,6 +56,11 @@ var gameAssets = {
             "tileh": 64,
             "map": {"wind": [0, 0]}
         },
+        "images/sprites/smoke.png": {
+            "tile": 64,
+            "tileh": 128,
+            "map": {"smoke": [0, 0]}
+        }
 
     },
 };
