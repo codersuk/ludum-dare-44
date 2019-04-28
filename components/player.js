@@ -9,7 +9,7 @@ Crafty.c("Player", {
             w: SINGLE_UNIT,
             h: DOUBLE_UNIT
         })
-        this.jumper(300, ['UP_ARROW', 'W']);
+        this.jumper(300, ['UP_ARROW', 'W','SPACE']);
         this.gravity("Platform");
         this.vx += MOVE_RIGHT_RATE_PLAYER;
         this.ax += MOVE_RIGHT_ACCELERATION_RATE_PLAYER;
@@ -97,7 +97,7 @@ Crafty.c("Player", {
 
 
             //if player keys 'space bar' it shoots something
-            //TODO bind a different key if needed
+            //TODO: bind a different key if needed
             // if (e.key == 32) {
             //     let tempItem = Crafty.e('Projectile, Delay')
             //     tempItem.x = this.x + this.w + 20;
