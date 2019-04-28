@@ -5,8 +5,8 @@ Crafty.c("Player", {
 		this.attr({
 			x: GAME_SCREEN_WIDTH / 2,
 			y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - SINGLE_UNIT,
-			w: DOUBLE_UNIT,
-			h: SINGLE_UNIT
+			w: SINGLE_UNIT,
+			h: DOUBLE_UNIT
 		})
 
 		this.jumper(300, ['UP_ARROW', 'W']);
