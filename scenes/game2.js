@@ -13,42 +13,40 @@ function sceneCountdown() {
     var time = Crafty.e('Countdown')
 }
 
-var objIndex = 0;
-
-function generateObjects(userlevel) {
-	setTimeout(function() {
-		var obj;
-		var objects = levels[userlevel];
-		
-		//if goes out of the index boundary
-		if(objIndex >= objects.length) {
-			objIndex = 0;
-		}
-
-		//get the object
-		obj = objects[objIndex++];
-		Crafty.e(obj);
-		generateObjects(userlevel);
-
-	}, getRandomInteger(3,7) * 1000);
+var levelObjIndex = 0;
+var objAppearanceDelay; // delay function
+function setObjectGenerationTimeout(userlevel) {
+    objAppearanceDelay = Crafty.e("Delay").delay(function() {
+        var objects = levels[userlevel];
+        
+        //if goes out of the index boundary
+        if(levelObjIndex >= objects.length) {
+            return;
+        }
+    
+        //get the object
+        var obj = objects[levelObjIndex++];
+        Crafty.e(obj);
+       
+        setObjectGenerationTimeout(userlevel);
+    }, getRandomInteger(3, 7) * 1000, 0) 
 }
 
-var player;
+var GhostPlayer;
 Crafty.defineScene("Game2", function (userlevel) {
     //TODO: add two layers of the background SCENE (need this from Tessa) This is to create the depth
     console.log("Game2 Loaded")
     var scene1BG = Crafty.e('Scene1BG')
     var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
-    var GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
+    GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
     var bountyhunter = Crafty.e('BountyHunter')
     //TODO: load the course environment here
 
-	//reset object index
-	objIndex = 0;
+	resetVariables();
 
-	//draw obstacles/powerups
-	generateObjects(userlevel);
+	//set timeout function to draw objects
+    setObjectGenerationTimeout(userlevel);
 
     //Loads the Scene timer
     sceneCountdown();
@@ -58,6 +56,11 @@ Crafty.defineScene("Game2", function (userlevel) {
 }, function () {
     console.log("Game2 UnLoaded")
 });
+
+function resetVariables() {
+    //reset object index
+    levelObjIndex = 0;
+}
 
 Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () {
     Crafty.scene("Game2", current_level)
