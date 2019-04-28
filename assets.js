@@ -9,7 +9,7 @@ var gameAssets = {
     "audio": {},
     "images": [],
     "sprites": {
-        "images/sprites/Dragonsprite64x124.png": {
+        "images/sprites/Dragonsprite64x124_new.png": {
             "tile": 64,
             "tileh": 124,
             "paddingY":1,
