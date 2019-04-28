@@ -2,12 +2,13 @@ Crafty.c("Countdown", {
     init : function () {
         this.requires('2D, DOM, Text, HUD, Delay')
         this.totalSeconds = 0;
-        this.attr({w: 50, h: 100, x: 700, y: 20})
-        this.fixedPosition(700, 20)
+        this.attr({w: 50, h: 100, x: 800, y: 20})
+        this.fixedPosition(800, 20)
         this.text("00:00")
+        this.textColor('#EEE');
         this.unselectable()
         this.delay(this.updateTimer, 1000, -1);
-        this.textFont({ size: '24px', weight: 'bold' });
+        this.textFont({ size: '26px', weight: 'bold' });
         this.bind("UpdateTime", function () {
             
         });
