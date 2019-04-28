@@ -50,7 +50,7 @@ Crafty.defineScene("Game2", function (userlevel) {
         .setJumpChance(60)
         // .color('#534')
     var bountyhunterJumpDetector3 = Crafty.e('Detector')
-        .attr({x: GAME_SCREEN_WIDTH / 25 + 50})
+        .attr({x: GAME_SCREEN_WIDTH / 25})
         // .color('#274')
     bountyhunter.attach(bountyhunterJumpDetector);
     bountyhunter.attach(bountyhunterJumpDetector2);
