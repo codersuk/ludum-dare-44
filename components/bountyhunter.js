@@ -7,7 +7,7 @@ Crafty.c("Detector", {
 			if(firstHit) {
 				if(this.jumpChance > Math.floor(Math.random()*100)) {
 					Crafty.trigger("WizardJump");
-					console.log(this.color())
+					// console.log(this.color())
 				}
 			}
 		}.bind(this)) 	
@@ -28,10 +28,9 @@ Crafty.c("BountyHunter", {
 		this.ax += MOVE_RIGHT_ACCELERATION_RATE_PLAYER;
 		this.jumpSpeed(200)
   		this.gravity("Platform");
-		this.jumper(300, ['T']);
 		this.setupActionForHitting("Projectile", this.slowDownWitch),
 		Crafty.bind("WizardJump", function () {
-			console.log("Wizard jumps")
+			// console.log("Wizard jumps")
 			this.jump();
 		}.bind(this));
 	},
@@ -65,10 +64,10 @@ Crafty.c("BountyHunter", {
 
 
         this.bind("PBOUNTY_HUNTER_HIT_" + objectToHit, function () {
-            console.log("BOUNTY_HUNTER_HIT_" + objectToHit);
+            // console.log("BOUNTY_HUNTER_HIT_" + objectToHit);
         })
         this.bind("BOUNTY_HUNTER_STOPPED_HITTING_" + objectToHit, function () {
-            console.log("BOUNTY_HUNTER_HIT_" + objectToHit);
+            // console.log("BOUNTY_HUNTER_HIT_" + objectToHit);
         })
     },
 });

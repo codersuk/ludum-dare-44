@@ -27,7 +27,7 @@ function placeObjectsOnScreen(userlevel) {
 
 var GhostPlayer;
 Crafty.defineScene("Game2", function (userlevel) {
-    console.log("Game2 Loaded")
+    // console.log("Game2 Loaded")
 
 
     Crafty.e('sceneLayer1');
@@ -69,7 +69,7 @@ Crafty.defineScene("Game2", function (userlevel) {
     // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT)
 }, function () {
-    console.log("Game2 UnLoaded");
+    // console.log("Game2 UnLoaded");
 });
 
 function resetVariables() {

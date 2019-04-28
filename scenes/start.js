@@ -28,7 +28,7 @@ Crafty.defineScene("Start", function () {
     startButton.bind('KeyDown', function (e) {
         if (e.key == 13) {
             // TODO: add scene link to start game here
-            alert('Enter clicked');
+            // alert('Enter clicked');
             Crafty.scene('Game2', current_level);
         }
     });
