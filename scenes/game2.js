@@ -61,7 +61,7 @@ Crafty.defineScene("Game2", function (userlevel) {
     sceneCountdown();
 
     // TODO: Offset calculation isn't right, close enough for now.
-    makeCameraTrackEntity(GhostPlayer, SINGLE_UNIT)
+    makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT)
 }, function () {
     console.log("Game2 UnLoaded");
 });
