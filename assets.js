@@ -51,6 +51,11 @@ var gameAssets = {
             "tileh": 64,
             "map": {"fire": [0, 0]}
         },
+        "images/sprites/Flameattack128x64.png": {
+            "tile": 128,
+            "tileh": 64,
+            "map": {"fireattack": [0, 0]}
+        },
         "images/sprites/wind.png": {
             "tile": 64,
             "tileh": 64,

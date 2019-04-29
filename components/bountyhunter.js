@@ -39,7 +39,7 @@ Crafty.c("BountyHunter", {
 		this.vx -= 100; 
 		var fire = hitData[0].obj;
 		this.delay(function () {
-			fire.color('#fff', 0.3);
+			fire.css('opacity', '0.4');
         }, 100);
 		this.delay(function () {
 			fire.destroy();
