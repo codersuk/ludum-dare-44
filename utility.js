@@ -1,7 +1,7 @@
 /*
 This is a utility page to update and bank the score.
  */
-
+var gametime = "";
 var start, end;
 
 function setTimeout(func, time, callOff) {
@@ -13,23 +13,23 @@ function setInterval(func, time, callOff) {
     // console.log("Don't use setInterval, it causes major issues with crafty. Use a Component called Delay.")
 }
 
-function startTimer(){
+// function startTimer(){
 
-//    Start timer
-    start = new Date();
-    // console.log('Start Timer')
+// //    Start timer
+//     start = new Date();
+//     // console.log('Start Timer')
 
-}
+// }
 
-function stopTimer(){
+// function stopTimer(){
 
-    end = new Date();
-    let output = end.getTime()-start.getTime();
-    //Bank the time
-    GAME_TIME += output;
-    // console.log(`Totle Time ${GAME_TIME}`);
+//     end = new Date();
+//     let output = end.getTime()-start.getTime();
+//     //Bank the time
+//     GAME_TIME += output;
+//     // console.log(`Totle Time ${GAME_TIME}`);
 
-}
+// }
 
 function getRandomInteger(min, max) {
 	return Math.floor(Math.random() * max) + min;

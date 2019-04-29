@@ -75,10 +75,11 @@ function resetVariables() {
     //reset object index
     levelObjIndex = 0;
     position = GAME_SCREEN_WIDTH;
+    gametime = "";
 }
 
 Crafty.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT, function () { 
-    Crafty.scene("Game2", current_level)
+    // Crafty.scene("Game2", current_level)
 })
 
 

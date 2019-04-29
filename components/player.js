@@ -21,12 +21,18 @@ Crafty.c("Player", {
         this.setupActionForHitting(ANGRYBIRD, this.decreaseSpeed);
         this.setupActionForHitting(STONE, this.stopMoving, this.startMoving);
         this.setupActionForHitting(WOODENLOG, this.stopMoving, this.startMoving);
-        this.setupActionForHitting("BountyHunter", function (hitData) {
-            Crafty.trigger(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT)
-        });
+        // this.setupActionForHitting("BountyHunter", function (hitData) {
+        //     Crafty.trigger(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT)
+        // });
+        this.setupActionForHitting("BountyHunter", this.userWasHit)
         this.setupPlayerControls();
         this.setupAnimation();
-        //	Setup the animation
+    },
+
+    userWasHit: function(){
+        this.delay(function () {
+            Crafty.scene('EndTitle');
+          }, 300)
     },
 
     increaseSpeed : function () {
