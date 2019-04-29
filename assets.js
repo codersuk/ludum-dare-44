@@ -70,6 +70,11 @@ var gameAssets = {
             "tile": 64,
             "tileh": 64,
             "map": {"powerup": [0, 0]}
+        },
+        "images/sprites/Play240x60.png": {
+            "tile": 240,
+            "tileh": 60,
+            "map": {"playbutton": [0, 0]}
         }
 
     },
