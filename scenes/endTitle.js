@@ -11,12 +11,13 @@ Crafty.defineScene("EndTitle", function () {
     Crafty.e('sceneLayer5');
 
     var textResult = Crafty.e('2D, DOM, Text')
-        .attr({x: GAME_SCREEN_WIDTH * 0.4, y: GAME_SCREEN_HEIGHT * 0.4, w: GAME_SCREEN_WIDTH * 0.5, h: 100})
+        .attr({x: GAME_SCREEN_WIDTH * 0.30, y: GAME_SCREEN_HEIGHT * 0.4, w: GAME_SCREEN_WIDTH * 0.5, h: 100})
+        .unselectable()
         .text(function () {
             var str = gametime.split(":");
             var minutes = parseInt(str[0]);
             var seconds = parseInt(str[1]);
-            var displaytext = "Score: " + (minutes > 0 ? minutes  + "m ": "") + (seconds > 0 ? seconds  + "s": "")
+            var displaytext = "You survived: " + (minutes > 0 ? minutes  + "mins ": "") + (seconds > 0 ? seconds  + " secs": "")
             return displaytext;// "Your Score is " + GAME_TIME + " mms";
         })
         .textFont({
@@ -28,19 +29,9 @@ Crafty.defineScene("EndTitle", function () {
     /*
     Add button to start the game again
      */
-    var StartGame = Crafty.e('2D, DOM, Color, Mouse, Keyboard, Text')
-        .attr({x: GAME_SCREEN_WIDTH * 0.2, y: GAME_SCREEN_HEIGHT * 0.7, w: GAME_SCREEN_WIDTH * 0.6, h: 100})
-        .color('#ff6d63')
+    var StartGame = Crafty.e('2D, DOM, playbutton, Mouse, Keyboard, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.5 - 120, y: GAME_SCREEN_HEIGHT * 0.65, w: 240, h: 60})        
     ;
-
-    Crafty.e('2D, DOM, Text, HUD, Delay')
-        .attr({w: 350, h: 100, x: 450, y: 750})
-        .fixedPosition(GAME_SCREEN_WIDTH /2 - 100, 300)
-        .text("Play Again!")
-        .textColor('#EEE')
-        .css('text-shadow', '3px 3px 3px black')
-        .unselectable()
-        .textFont({ size: '40px', weight: 'bold' });
 
     //    Add event on click to jump to next screen
 
