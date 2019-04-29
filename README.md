@@ -3,7 +3,9 @@ You are the last dragon, and a witch wants your blood to make potions to sell to
 
 A classic timeless side scrolling platformer where the player must avoid obstacles and use powerups to not get caught.
 
-![the last dragon screenshot](https://static.jam.vg/raw/3bd/41/z/22640.png)
+![the last dragon title screenshot](https://static.jam.vg/raw/3bd/41/z/22640.png)
+
+![the last dragon ingame screenshot](https://static.jam.vg/raw/3bd/41/z/226f9.png)
 
 ## Controls:
 
