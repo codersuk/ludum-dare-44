@@ -1,7 +1,7 @@
 Crafty.c("Detector", {
 	init : function () {
 		this.requires('2D, DOM, Collision, Color')
-		this.attr({x: GAME_SCREEN_WIDTH / 25 + 180 * 1.35, y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - 48 - 2, w: 48, h: 48})
+		this.attr({x: GAME_SCREEN_WIDTH / 25 + 240, y: GAME_SCREEN_HEIGHT - SINGLE_UNIT - 48 - 2, w: 48, h: 48})
 		this.jumpChance = 101;
 		this.onHit("Obstacle", function (hitData, firstHit) {
 			if(firstHit) {
