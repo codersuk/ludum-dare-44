@@ -31,12 +31,11 @@ Crafty.c("BountyHunter", {
 		this.setupActionForHitting("Projectile", this.slowDownWitch),
 		this.setupActionForHitting(ANGRYBIRD, this.decreaseSpeed),
 		Crafty.bind("WizardJump", function () {
-			console.log("Wizard jumps")
 			this.jump();
 		}.bind(this));
 	},
 	slowDownWitch: function(hitData) {
-		this.vx -= 100; 
+		this.vx -= 70; 
 		var fire = hitData[0].obj;
 		this.delay(function () {
 			fire.css('opacity', '0.4');
@@ -47,7 +46,7 @@ Crafty.c("BountyHunter", {
 	
 
         this.delay(function () {
-            this.vx += 100;
+            this.vx += 70;
         }, 600);
 	},
 	decreaseSpeed: function() {

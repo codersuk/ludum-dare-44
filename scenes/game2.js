@@ -33,7 +33,6 @@ Crafty.defineScene("Game2", function (userlevel) {
     Crafty.e('sceneLayer2');
     Crafty.e('sceneLayer3');
     Crafty.e('sceneLayer4').vx = 0;
-    Crafty.e('sceneLayer5').vx = 0;
     var platform = Crafty.e('GroundPlatform')
     player = Crafty.e('Player')
     GhostPlayer = Crafty.e('GhostPlayer') // ghost player (hidden, no collision)
@@ -67,6 +66,7 @@ Crafty.defineScene("Game2", function (userlevel) {
 
     // TODO: Offset calculation isn't right, close enough for now.
     makeCameraTrackEntity(GhostPlayer, DOUBLE_UNIT)
+    Crafty.e('sceneLayer5').vx = 0;
 }, function () {
     // console.log("Game2 UnLoaded");
 });
