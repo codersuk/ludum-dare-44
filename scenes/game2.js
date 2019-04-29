@@ -28,7 +28,6 @@ function placeObjectsOnScreen(userlevel) {
 var GhostPlayer;
 Crafty.defineScene("Game2", function (userlevel) {
     // console.log("Game2 Loaded")
-
     Crafty.e('sceneLayer1').vx = 0;
     Crafty.e('sceneLayer2');
     Crafty.e('sceneLayer3');

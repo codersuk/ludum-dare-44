@@ -52,7 +52,7 @@ Crafty.c("Player", {
     blastFire: function() {
         this.animate('PlayerReverseRunning', -1)
         var player = this;
-
+        Crafty.audio.play("dragon-fire", 1, 0.1);
         let tempItem = Crafty.e('Projectile, Delay')
         tempItem.x = this.x - this.w - 20;
         tempItem.y = this.y;
@@ -133,6 +133,7 @@ Crafty.c("Player", {
     setupActionForHitting: function (objectToHit, onHit, offHit) {
         this.onHit(objectToHit, function (hitData, firstHit) {
             if (isObjectNotNull(onHit) && firstHit) {
+                this.trigger("PLAYER_FIRST_HIT_" + objectToHit);
                 onHit.call(this);
             }
             this.trigger("PLAYER_HIT_" + objectToHit);
@@ -144,7 +145,13 @@ Crafty.c("Player", {
         });
 
 
-        this.bind("PLAYER_HIT_" + objectToHit, function () {
+        this.bind("PLAYER_FIRST_HIT_" + objectToHit, function () {
+            if(objectToHit == PUDDLE ||
+                objectToHit == STONE ||
+                objectToHit == WOODENLOG
+            ) {
+                Crafty.audio.play("bump-into", 1, 0.1);
+            }
             // console.log("PLAYER_HIT_" + objectToHit);
         })
         this.bind("PLAYER_STOPPED_HITTING_" + objectToHit, function () {

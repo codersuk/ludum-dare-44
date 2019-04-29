@@ -6,7 +6,15 @@ this is our game assets object.
 // User lower case for component name
 // 
 var gameAssets = {
-    "audio": {},
+    "audio": {
+        "ambient-background-slow" : ["audio/ambient-woods-slow.wav"],
+        "ambient-background-normal" : ["audio/ambient-woods-normal.wav"],
+        "ambient-background-fast" : ["audio/ambient-woods-fast.wav"],
+        "ambient-background-faster" : ["audio/ambient-woods-300.mp3"], 
+        "ambient-background-fastest" : ["audio/ambient-woods-800.mp3"], 
+        "dragon-fire" : ["audio/dragon-fire.mp3"], 
+        "bump-into" : ["audio/bump-into.mp3"], 
+    },
     "images": [],
     "sprites": {
         "images/sprites/Dragonsprite68x128.png": {
