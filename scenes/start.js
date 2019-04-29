@@ -15,8 +15,7 @@ Crafty.defineScene("Start", function () {
     // Menu in the middle
 
     var startButton = Crafty.e('2D, DOM, playbutton, Mouse, Keyboard')
-        .attr({x: GAME_SCREEN_WIDTH * 0.2, y: GAME_SCREEN_HEIGHT * 0.65, w: GAME_SCREEN_WIDTH * 0.6, h: 100})
-        .css('box-shadow', '0 2px 4px 0 rgba(0,0,0,0.46)');
+        .attr({x: GAME_SCREEN_WIDTH * 0.5 - 120, y: GAME_SCREEN_HEIGHT * 0.65, w: 240, h: 60})
     ;
 
 //    Add event on click to jump to next screen
