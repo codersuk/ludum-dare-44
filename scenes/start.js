@@ -11,7 +11,7 @@ Crafty.defineScene("Start", function () {
     Crafty.e('sceneLayer5');
 
     //Start timer to add to the total Score
-    startTimer();
+    // startTimer();
     // Menu in the middle
 
     var startButton = Crafty.e('2D, DOM, Color, Mouse, Keyboard')
