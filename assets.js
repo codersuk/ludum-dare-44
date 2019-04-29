@@ -13,6 +13,7 @@ var gameAssets = {
         "ambient-background-faster" : ["audio/ambient-woods-300.mp3"], 
         "ambient-background-fastest" : ["audio/ambient-woods-800.mp3"], 
         "dragon-fire" : ["audio/dragon-fire.mp3"], 
+        "bump-into" : ["audio/bump-into.mp3"], 
     },
     "images": [],
     "sprites": {
