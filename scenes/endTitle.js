@@ -30,7 +30,7 @@ Crafty.defineScene("EndTitle", function () {
     Add button to start the game again
      */
     var StartGame = Crafty.e('2D, DOM, playbutton, Mouse, Keyboard, Text')
-        .attr({x: GAME_SCREEN_WIDTH * 0.5 - 120, y: GAME_SCREEN_HEIGHT * 0.65, w: 240, h: 60})        
+        .attr({x: GAME_SCREEN_WIDTH * 0.5 - 120, y: GAME_SCREEN_HEIGHT * 0.75, w: 240, h: 60})        
     ;
 
     //    Add event on click to jump to next screen

@@ -15,7 +15,7 @@ Crafty.defineScene("Start", function () {
     // Menu in the middle
 
     var startButton = Crafty.e('2D, DOM, playbutton, Mouse, Keyboard')
-        .attr({x: GAME_SCREEN_WIDTH * 0.5 - 120, y: GAME_SCREEN_HEIGHT * 0.65, w: 240, h: 60})
+        .attr({x: GAME_SCREEN_WIDTH * 0.5 - 120, y: GAME_SCREEN_HEIGHT * 0.75, w: 240, h: 60})
     ;
 
 //    Add event on click to jump to next screen
@@ -41,6 +41,7 @@ Crafty.defineScene("Start", function () {
         .attr({x: GAME_SCREEN_WIDTH * 0.38, y: GAME_SCREEN_HEIGHT * 0.4, w: GAME_SCREEN_WIDTH * 0.5, h: 100})
         .unselectable()
         .text("The Last Dragon")
+        .css('text-shadow', '2px 2px 3px black')
         .textFont({
             size: '60px', family: 'Garamond', weight: 'bold'
         })
@@ -51,7 +52,7 @@ Crafty.defineScene("Start", function () {
 
     //dragon
     Crafty.e('2D, DOM, player')
-    .attr({x: GAME_SCREEN_WIDTH * 0.32, y: GAME_SCREEN_HEIGHT * 0.23, w: 50, h: 94})
+    .attr({x: GAME_SCREEN_WIDTH * 0.25, y: GAME_SCREEN_HEIGHT * 0.208, w: 50, h: 94})
 
      //witch
      Crafty.e('2D, DOM, bountyHunter_flip')
@@ -64,11 +65,13 @@ Crafty.defineScene("Start", function () {
     //     .textColor("FFF");
 
     var instruction = Crafty.e('2D, DOM, Text')
-        .attr({x: GAME_SCREEN_WIDTH * 0.9, y: 0.2, w: 198, h: 40})
+        .attr({x: GAME_SCREEN_WIDTH * 0.9, y: 3, w: 400, h: 40})
         .unselectable()
-        .text("Try not to get caught by the crafy Witch!")
+        .css('text-shadow', '2px 2px 2px black')
+        .textAlign('center')
+        .text("The witch wants your dragon blood to make into potions to sell!")
         .textFont({
-           weight: 'bold'
+            size: '14px', family: 'Garamond', weight: 'bold'
         })
         .textColor("#c2d6d6");
     instruction.x = (GAME_SCREEN_WIDTH/2) - (instruction.w/2) + 5;
@@ -81,12 +84,16 @@ function tutorial() {
     var textColor = "#ddd";
      //BOX RIGHT
      Crafty.e('2D, DOM, Color')
-     .attr({x: GAME_SCREEN_WIDTH * 0.7, y: GAME_SCREEN_HEIGHT * 0.68, w: 230, h: 100}).color('#194c5e');
+     .attr({x: GAME_SCREEN_WIDTH * 0.7, y: GAME_SCREEN_HEIGHT * 0.68, w: 230, h: 100})
+     .css('box-shadow', '2px 2px 6px 0 rgba(0,0,0,0.86)')
+     .color('#194c5e');
 
 
     //BOX LEFT
     Crafty.e('2D, DOM, Color')
-        .attr({x: GAME_SCREEN_WIDTH * 0.05, y: GAME_SCREEN_HEIGHT * 0.68, w: 230, h: 100}).color('#194c5e');
+        .attr({x: GAME_SCREEN_WIDTH * 0.05, y: GAME_SCREEN_HEIGHT * 0.68, w: 230, h: 100})
+        .css('box-shadow', '2px 2px 6px 0 rgba(0,0,0,0.86)')
+        .color('#194c5e');
 
      //bird
      Crafty.e('2D, DOM, angrybird')
