@@ -13,6 +13,7 @@ Crafty.defineScene("EndTitle", function () {
     var textResult = Crafty.e('2D, DOM, Text')
         .attr({x: GAME_SCREEN_WIDTH * 0.30, y: GAME_SCREEN_HEIGHT * 0.4, w: GAME_SCREEN_WIDTH * 0.5, h: 100})
         .unselectable()
+        .css('text-shadow', '3px 3px 3px black')
         .text(function () {
             var str = gametime.split(":");
             var minutes = parseInt(str[0]);

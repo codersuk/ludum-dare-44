@@ -5,6 +5,7 @@ Crafty.c("Countdown", {
         this.attr({w: 50, h: 100, x: 800, y: 20})
         this.fixedPosition(800, 20)
         this.text("00:00")
+        this.css('text-shadow', '3px 3px 3px black')
         this.textColor('#EEE');
         this.unselectable()
         this.delay(this.updateTimer, 1000, -1);
