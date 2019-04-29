@@ -66,13 +66,10 @@ var gameAssets = {
             "tileh": 128,
             "map": {"smoke": [0, 0]}
         },
-
-
-
         "images/sprites/FruitPowerup64x64.png": {
             "tile": 64,
             "tileh": 64,
-            "map": {"smoke": [0, 0]}
+            "map": {"powerup": [0, 0]}
         }
 
     },
