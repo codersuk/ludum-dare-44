@@ -1,5 +1,5 @@
-var fire_width = 32;
-var fire_height = 32;
+var fire_width = 64;
+var fire_height = 64;
 
 Crafty.c(FIRE, {
 	init : function () {
