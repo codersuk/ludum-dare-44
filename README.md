@@ -9,7 +9,12 @@ Jump - Click or tap the screen, or use W key or Up Arrow Key to jump
 
 Double jump - Press jump key twice!
 
-## Crafty JS Docs:
+## Play now
+- [https://flyingkiwi.itch.io/the-last-dragon](
+https://flyingkiwi.itch.io/the-last-dragon)
+
+## Crafty JS Docs
+
 - [http://craftyjs.com/api/Collision.html#-collision](
 http://craftyjs.com/api/Collision.html#-collision)
 
