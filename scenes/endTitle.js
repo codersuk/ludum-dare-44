@@ -4,8 +4,11 @@ This is the start Scene
  */
 Crafty.defineScene("EndTitle", function () {
 
-    //Stops timer and add it to the total score
-    stopTimer()
+    Crafty.e('sceneLayer1');
+    Crafty.e('sceneLayer2');
+    Crafty.e('sceneLayer3');
+    Crafty.e('sceneLayer4');
+    Crafty.e('sceneLayer5');
 
     var textResult = Crafty.e('2D, DOM, Text')
         .attr({x: GAME_SCREEN_WIDTH * 0.2, y: GAME_SCREEN_HEIGHT * 0.10, w: GAME_SCREEN_WIDTH * 0.5, h: 100})

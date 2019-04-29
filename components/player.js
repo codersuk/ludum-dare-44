@@ -26,8 +26,19 @@ Crafty.c("Player", {
         });
         this.setupPlayerControls();
         this.setupAnimation();
-        //	Setup the animation
+        // Setup the hit action
+        this.userWasHit();
+
     },
+
+   userWasHit:function(){
+    this.bind(GLOBAL_EVENTS.PLAYER_HIT_BOUNTY_HUNTER_EVENT,function(){
+        setTimeout(function () {
+            Crafty.scene('EndTitle');
+          }, 300)
+    })
+   },
+
 
     increaseSpeed : function () {
         this.vx += 120; 
