@@ -9,14 +9,14 @@ var gameAssets = {
     "audio": {},
     "images": [],
     "sprites": {
-        "images/sprites/Dragonsprite64x124_new.png": {
-            "tile": 64,
-            "tileh": 124,
+        "images/sprites/Dragonsprite68x128.png": {
+            "tile": 68,
+            "tileh": 128,
             "paddingY":1,
             "map": {"player": [0, 0]}
         },
-        "images/sprites/Wizard96x192.png": {
-            "tile": 96,
+        "images/sprites/Wizard99x192.png": {
+            "tile": 99,
             "tileh": 192,
             "map": {"bountyHunter": [0, 0]}
         },
