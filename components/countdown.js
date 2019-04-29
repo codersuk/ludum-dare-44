@@ -25,8 +25,9 @@ Crafty.c("Countdown", {
             }
         }
 
+        gametime = ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2)
         //update time text
-        this.text(("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2));
+        this.text(gametime);
     },
 
     setCountdownOverAction : function (func) {
