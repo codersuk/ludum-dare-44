@@ -79,39 +79,44 @@ Crafty.defineScene("Start", function () {
 function tutorial() {
 
     var textColor = "#ddd";
+     //BOX RIGHT
+     Crafty.e('2D, DOM, Color')
+     .attr({x: GAME_SCREEN_WIDTH * 0.7, y: GAME_SCREEN_HEIGHT * 0.68, w: 230, h: 100}).color('#194c5e');
+
+
      //bird
      Crafty.e('2D, DOM, angrybird')
-     .attr({x: GAME_SCREEN_WIDTH * 0.75, y: GAME_SCREEN_HEIGHT * 0.60, w: 52, h: 52})
+     .attr({x: GAME_SCREEN_WIDTH * 0.8, y: GAME_SCREEN_HEIGHT * 0.69, w: 42, h: 42})
  
      Crafty.e('2D, DOM, Text')
-         .attr({x: GAME_SCREEN_WIDTH * 0.75, y: GAME_SCREEN_HEIGHT * 0.58, w: 120, h: 40})
+         .attr({x: GAME_SCREEN_WIDTH * 0.85, y: GAME_SCREEN_HEIGHT * 0.70, w: 120, h: 40})
          .unselectable()
          .text("Crow")
          .textColor(textColor);
 
      //woodenlog
      Crafty.e('2D, DOM, woodenlog')
-     .attr({x: GAME_SCREEN_WIDTH * 0.70, y: GAME_SCREEN_HEIGHT * 0.75, w: 52, h: 52})
+     .attr({x: GAME_SCREEN_WIDTH * 0.73, y: GAME_SCREEN_HEIGHT * 0.75, w: 45, h: 45})
  
      Crafty.e('2D, DOM, Text')
-         .attr({x: GAME_SCREEN_WIDTH * 0.70, y: GAME_SCREEN_HEIGHT * 0.88, w: 340, h: 40})
+         .attr({x: GAME_SCREEN_WIDTH * 0.71, y: GAME_SCREEN_HEIGHT * 0.88, w: 340, h: 40})
          .unselectable()
          .text("WoodenLog")
          .textColor(textColor);
 
     //puddle
     var obs_puddle = Crafty.e('2D, DOM, puddle')
-    .attr({x: GAME_SCREEN_WIDTH * 0.79, y: GAME_SCREEN_HEIGHT * 0.87, w: 85, h: 10})
+    .attr({x: GAME_SCREEN_WIDTH * 0.79, y: GAME_SCREEN_HEIGHT * 0.84, w: 65, h: 10})
 
     Crafty.e('2D, DOM, Text')
-    .attr({x: GAME_SCREEN_WIDTH * 0.81, y: GAME_SCREEN_HEIGHT * 0.83, w: 340, h: 40})
+    .attr({x: GAME_SCREEN_WIDTH * 0.81, y: GAME_SCREEN_HEIGHT * 0.81, w: 340, h: 40})
     .unselectable()
     .text("Puddle")
     .textColor(textColor);
 
     //stone
     Crafty.e('2D, DOM, stone')
-    .attr({x: GAME_SCREEN_WIDTH * 0.86, y: GAME_SCREEN_HEIGHT * 0.75, w: 55, h: 36})
+    .attr({x: GAME_SCREEN_WIDTH * 0.86, y: GAME_SCREEN_HEIGHT * 0.75, w: 50, h: 32})
 
     Crafty.e('2D, DOM, Text')
         .attr({x: GAME_SCREEN_WIDTH * 0.90, y: GAME_SCREEN_HEIGHT * 0.85, w: 340, h: 40})
@@ -121,11 +126,15 @@ function tutorial() {
 
     //text: hindrace
     Crafty.e('2D, DOM, Text')
-        .attr({x: GAME_SCREEN_WIDTH * 0.85, y: GAME_SCREEN_HEIGHT * 0.91, w: 340, h: 40})
+        .attr({x: GAME_SCREEN_WIDTH * 0.85, y: GAME_SCREEN_HEIGHT * 0.88, w: 340, h: 40})
         .unselectable()
         .text("Obstacles")
         .textFont({ size: '20px', family: 'Garamond', weight: 'bold'})
         .textColor(textColor);
+
+    //BOX LEFT
+    Crafty.e('2D, DOM, Color')
+        .attr({x: GAME_SCREEN_WIDTH * 0.05, y: GAME_SCREEN_HEIGHT * 0.70, w: 230, h: 100}).color('#194c5e');
 
     //text:boost
     Crafty.e('2D, DOM, Text')
