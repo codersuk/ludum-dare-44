@@ -8,6 +8,8 @@ Crafty.c(FIRE, {
              y: GAME_SCREEN_HEIGHT - DISTANCE_UP_FROM_BOTTOM_OF_SCREEN - fire_height * 3 - (Math.random() * 200 - 100), 
              w: fire_width, 
              h: fire_height});
+    	
+
 	},
 });
 

@@ -28,7 +28,6 @@ function placeObjectsOnScreen(userlevel) {
 var GhostPlayer;
 Crafty.defineScene("Game2", function (userlevel) {
     // console.log("Game2 Loaded")
-    Crafty.audio.play("ambient-background-slow", -1, 0.05);
     Crafty.e('sceneLayer1').vx = 0;
     Crafty.e('sceneLayer2');
     Crafty.e('sceneLayer3');
