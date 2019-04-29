@@ -1,5 +1,5 @@
-var angry_width = 32;
-var angry_height = 32;
+var angry_width = 68;
+var angry_height = 64;
 
 Crafty.c(ANGRYBIRD, {
 	init : function () {
