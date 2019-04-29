@@ -7,7 +7,7 @@ Crafty.c("sceneLayer1", {
 
         this.attr({x: 0, y: 0, w: widthOfImage * 100, h: heightOfImage});
         this.image("images/background/BG4.png", "repeat-x");
-        this.vx -= 15;
+        this.vx -= 1;
 
 
     },
