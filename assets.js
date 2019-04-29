@@ -8,6 +8,7 @@ this is our game assets object.
 var gameAssets = {
     "audio": {
         "ambient-background-slow" : ["audio/ambient-woods-slow.wav"],
+        "background" : ["audio/Surreal-Chase.mp3"],
         "ambient-background-normal" : ["audio/ambient-woods-normal.wav"],
         "ambient-background-fast" : ["audio/ambient-woods-fast.wav"],
         "ambient-background-faster" : ["audio/ambient-woods-300.mp3"], 

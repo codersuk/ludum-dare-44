@@ -3,7 +3,7 @@ This is the start Scene
 
  */
 Crafty.defineScene("Start", function () {
-    Crafty.audio.play("ambient-background-slow", -1, 0.1);
+    Crafty.audio.play("background", -1, 0.3);
 
     Crafty.e('sceneLayer1');
     Crafty.e('sceneLayer2');

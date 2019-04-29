@@ -52,7 +52,7 @@ Crafty.c("Player", {
     blastFire: function() {
         this.animate('PlayerReverseRunning', -1)
         var player = this;
-        Crafty.audio.play("dragon-fire", 1, 0.1);
+        Crafty.audio.play("dragon-fire", 1, 0.5);
         let tempItem = Crafty.e('Projectile, Delay')
         tempItem.x = this.x - this.w - 20;
         tempItem.y = this.y;
