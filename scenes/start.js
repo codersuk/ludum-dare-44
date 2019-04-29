@@ -36,8 +36,128 @@ Crafty.defineScene("Start", function () {
         }
     });
 
+    //TITLE
+    var gameTitle = Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.38, y: GAME_SCREEN_HEIGHT * 0.4, w: GAME_SCREEN_WIDTH * 0.5, h: 100})
+        .unselectable()
+        .text("The Last Dragon")
+        .textFont({
+            size: '60px', family: 'Garamond', weight: 'bold'
+        })
+        .textColor('#FFF');
+        //.textColor('#00cccc');
 
+    gameTitle.x = (GAME_SCREEN_WIDTH/2) - (gameTitle.w/2);
+
+    //dragon
+    Crafty.e('2D, DOM, player')
+    .attr({x: GAME_SCREEN_WIDTH * 0.32, y: GAME_SCREEN_HEIGHT * 0.23, w: 50, h: 94})
+
+     //witch
+     Crafty.e('2D, DOM, bountyHunter_flip')
+     .attr({x: GAME_SCREEN_WIDTH * 0.88, y: GAME_SCREEN_HEIGHT * 0.33, w: 70, h: 136})
+
+    //  Crafty.e('2D, DOM, Text')
+    //     .attr({x: GAME_SCREEN_WIDTH * 0.88, y: GAME_SCREEN_HEIGHT * 0.30, w: 120, h: 40})
+    //     .unselectable()
+    //     .text("Witch")
+    //     .textColor("FFF");
+
+    var instruction = Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.9, y: 0.2, w: 198, h: 40})
+        .unselectable()
+        .text("Try not to get caught by the crafy Witch!")
+        .textFont({
+           weight: 'bold'
+        })
+        .textColor("#c2d6d6");
+    instruction.x = (GAME_SCREEN_WIDTH/2) - (instruction.w/2) + 5;
+
+    tutorial();
 });
+
+function tutorial() {
+
+    var textColor = "#ddd";
+     //bird
+     Crafty.e('2D, DOM, angrybird')
+     .attr({x: GAME_SCREEN_WIDTH * 0.75, y: GAME_SCREEN_HEIGHT * 0.60, w: 52, h: 52})
+ 
+     Crafty.e('2D, DOM, Text')
+         .attr({x: GAME_SCREEN_WIDTH * 0.75, y: GAME_SCREEN_HEIGHT * 0.58, w: 120, h: 40})
+         .unselectable()
+         .text("Crow")
+         .textColor(textColor);
+
+     //woodenlog
+     Crafty.e('2D, DOM, woodenlog')
+     .attr({x: GAME_SCREEN_WIDTH * 0.70, y: GAME_SCREEN_HEIGHT * 0.75, w: 52, h: 52})
+ 
+     Crafty.e('2D, DOM, Text')
+         .attr({x: GAME_SCREEN_WIDTH * 0.70, y: GAME_SCREEN_HEIGHT * 0.88, w: 340, h: 40})
+         .unselectable()
+         .text("WoodenLog")
+         .textColor(textColor);
+
+    //puddle
+    var obs_puddle = Crafty.e('2D, DOM, puddle')
+    .attr({x: GAME_SCREEN_WIDTH * 0.79, y: GAME_SCREEN_HEIGHT * 0.87, w: 85, h: 10})
+
+    Crafty.e('2D, DOM, Text')
+    .attr({x: GAME_SCREEN_WIDTH * 0.81, y: GAME_SCREEN_HEIGHT * 0.83, w: 340, h: 40})
+    .unselectable()
+    .text("Puddle")
+    .textColor(textColor);
+
+    //stone
+    Crafty.e('2D, DOM, stone')
+    .attr({x: GAME_SCREEN_WIDTH * 0.86, y: GAME_SCREEN_HEIGHT * 0.75, w: 55, h: 36})
+
+    Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.90, y: GAME_SCREEN_HEIGHT * 0.85, w: 340, h: 40})
+        .unselectable()
+        .text("Rock")
+        .textColor(textColor);
+
+    //text: hindrace
+    Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.85, y: GAME_SCREEN_HEIGHT * 0.91, w: 340, h: 40})
+        .unselectable()
+        .text("Obstacles")
+        .textFont({ size: '20px', family: 'Garamond', weight: 'bold'})
+        .textColor(textColor);
+
+    //text:boost
+    Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.15, y: GAME_SCREEN_HEIGHT * 0.88, w: 340, h: 40})
+        .unselectable()
+        .text("Boosts")
+        .textFont({ size: '20px', family: 'Garamond', weight: 'bold'})
+        .textColor(textColor);
+    
+    //fireattack
+    Crafty.e('2D, DOM, fireattack')
+    .attr({x: GAME_SCREEN_WIDTH * 0.1, y: GAME_SCREEN_HEIGHT * 0.78, w: 70, h: 38})
+
+    Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.1, y: GAME_SCREEN_HEIGHT * 0.75, w: 340, h: 40})
+        .unselectable()
+        .text("Dragon fire")
+        .textColor(textColor);
+
+    //fruit
+    Crafty.e('2D, DOM, powerup')
+    .attr({x: GAME_SCREEN_WIDTH * 0.2, y: GAME_SCREEN_HEIGHT * 0.80, w: 30, h: 30})
+
+    Crafty.e('2D, DOM, Text')
+        .attr({x: GAME_SCREEN_WIDTH * 0.2, y: GAME_SCREEN_HEIGHT * 0.75, w: 340, h: 40})
+        .unselectable()
+        .text("Fruit")
+        .textColor(textColor);
+
+ 
+   
+}
 
 
 
