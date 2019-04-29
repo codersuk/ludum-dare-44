@@ -9,14 +9,14 @@ var gameAssets = {
     "audio": {},
     "images": [],
     "sprites": {
-        "images/sprites/Dragonsprite64x124_new.png": {
-            "tile": 64,
-            "tileh": 124,
+        "images/sprites/Dragonsprite68x128.png": {
+            "tile": 68,
+            "tileh": 128,
             "paddingY":1,
             "map": {"player": [0, 0]}
         },
-        "images/sprites/Wizard96x192.png": {
-            "tile": 96,
+        "images/sprites/Wizard99x192.png": {
+            "tile": 99,
             "tileh": 192,
             "map": {"bountyHunter": [0, 0]}
         },
@@ -26,7 +26,7 @@ var gameAssets = {
             "tileh": 64,
             "map": {"grass": [0, 0]}
         },
-        "images/sprites/puddle.png": {
+        "images/sprites/Pool85x10.png": {
             "tile": 85,
             "tileh": 10,
             "map": {"puddle": [0, 0]}
@@ -41,15 +41,14 @@ var gameAssets = {
             "tileh": 64,
             "map": {"woodenlog": [0, 0]}
         },
-
-        "images/sprites/angrybird_red.png": {
-            "tile": 50,
-            "tileh": 50,
+        "images/sprites/Angrybird68x64.png": {
+            "tile": 68,
+            "tileh": 64,
             "map": {"angrybird": [0, 0]}
         },
-        "images/sprites/fire.png": {
-            "tile": 32,
-            "tileh": 32,
+        "images/sprites/FlamePowerup64x64.png": {
+            "tile": 64,
+            "tileh": 64,
             "map": {"fire": [0, 0]}
         },
         "images/sprites/wind.png": {
@@ -60,6 +59,14 @@ var gameAssets = {
         "images/sprites/smoke.png": {
             "tile": 64,
             "tileh": 128,
+            "map": {"smoke": [0, 0]}
+        },
+
+
+
+        "images/sprites/FruitPowerup64x64.png": {
+            "tile": 64,
+            "tileh": 64,
             "map": {"smoke": [0, 0]}
         }
 

@@ -8,6 +8,7 @@ Crafty.defineScene("Start", function () {
     Crafty.e('sceneLayer2');
     Crafty.e('sceneLayer3');
     Crafty.e('sceneLayer4');
+    Crafty.e('sceneLayer5');
 
     //Start timer to add to the total Score
     startTimer();
