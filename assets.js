@@ -51,6 +51,11 @@ var gameAssets = {
             "tileh": 64,
             "map": {"fire": [0, 0]}
         },
+        "images/sprites/Flameattack128x64.png": {
+            "tile": 128,
+            "tileh": 64,
+            "map": {"fireattack": [0, 0]}
+        },
         "images/sprites/wind.png": {
             "tile": 64,
             "tileh": 64,
@@ -61,13 +66,15 @@ var gameAssets = {
             "tileh": 128,
             "map": {"smoke": [0, 0]}
         },
-
-
-
         "images/sprites/FruitPowerup64x64.png": {
             "tile": 64,
             "tileh": 64,
-            "map": {"smoke": [0, 0]}
+            "map": {"powerup": [0, 0]}
+        },
+        "images/sprites/Play240x60.png": {
+            "tile": 240,
+            "tileh": 60,
+            "map": {"playbutton": [0, 0]}
         }
 
     },
