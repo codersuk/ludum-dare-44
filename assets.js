@@ -29,6 +29,12 @@ var gameAssets = {
             "map": {"bountyHunter": [0, 0]}
         },
 
+        "images/sprites/Wizard99x192_flip.png": {
+            "tile": 99,
+            "tileh": 192,
+            "map": {"bountyHunter_flip": [0, 0]}
+        },
+
         "images/sprites/grass.png": {
             "tile": 64,
             "tileh": 64,
