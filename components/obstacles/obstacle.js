@@ -11,5 +11,6 @@ Crafty.c("Obstacle", {
     },
     changePosition: function(newPosition) {
         this.x = newPosition;
+        return this;
     }
 })

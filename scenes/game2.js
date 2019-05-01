@@ -22,6 +22,16 @@ function placeObjectsOnScreen(userlevel) {
         position += getRandomInteger(200, 400);
         var obj = objects[levelObjIndex++];
         var craftyObj = Crafty.e(obj).changePosition(position);
+        console.log(obj, craftyObj)
+        if(obj == STONE || obj == WOODENLOG) {
+            Crafty.e("OBSTACLE_TOP")
+                .attr({
+                     x: position,
+                     y: craftyObj.y - 4,
+                     w: craftyObj.w + 4, 
+                     h: 2
+                 })
+        }
     }
 }
 

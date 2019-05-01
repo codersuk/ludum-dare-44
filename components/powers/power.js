@@ -7,5 +7,6 @@ Crafty.c("Power", {
     },
     changePosition: function(newPosition) {
         this.x = newPosition;
+        return this;
     }
 })
